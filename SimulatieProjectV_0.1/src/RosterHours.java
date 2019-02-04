@@ -1,6 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.sql.Time;
 
 public class RosterHours {
@@ -20,8 +18,35 @@ public class RosterHours {
         this.classroom = classroom;
     }
 
-    public void writeStudent(Subject subject, Class schoolClass, Time startTime, Time endTime, Teacher teacher, Classroom classroom) {
-        File file = new File("src//students.txt");
+    public void RetrieveRoster(String foundFile){
+
+        String line = null;
+
+        try {
+            FileReader fileReader = new FileReader(foundFile);
+
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+            while((line = bufferedReader.readLine()) != null) {
+                System.out.println(line);
+            }
+
+            bufferedReader.close();
+        }
+        catch(FileNotFoundException ex) {
+            System.out.println(
+                    "Unable to open file '" +
+                            foundFile + "'");
+        }
+        catch(IOException ex) {
+            System.out.println(
+                    "Error reading file '"
+                            + foundFile + "'");
+        }
+    }
+
+    public void writeRosterHours(Subject subject, Class schoolClass, Time startTime, Time endTime, Teacher teacher, Classroom classroom) {
+        File file = new File("src//rosterhours.txt");
         PrintWriter output = null;
         try {
             output = new PrintWriter(file);
