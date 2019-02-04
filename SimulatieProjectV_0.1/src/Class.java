@@ -8,4 +8,20 @@ public class Class {
         this.students = students;
         this.classID = classID;
     }
+
+    public ArrayList<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(ArrayList<Student> students) {
+        this.students = students;
+    }
+
+    public int getClassID() {
+        return classID;
+    }
+
+    public void setClassID(int classID) {
+        this.classID = classID;
+    }
 }
