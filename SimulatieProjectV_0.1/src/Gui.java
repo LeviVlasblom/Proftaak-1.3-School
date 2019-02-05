@@ -1,16 +1,24 @@
 import javafx.application.Application;
+import javafx.beans.property.ObjectProperty;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+
+import java.io.*;
 
 public class Gui extends Application
 {
+    private Text actionStatus;
     private Button button;
-    private Button button0;
+    private Button btnOphalen;
     private Button button1;
     private Button button2;
     private Separator separator;
@@ -67,7 +75,7 @@ public class Gui extends Application
         separator = new Separator();
         hBox0 = new HBox();
         button = new Button();
-        button0 = new Button();
+        btnOphalen = new Button();
         hBox1 = new HBox();
         button1 = new Button();
         button2 = new Button();
@@ -140,10 +148,10 @@ public class Gui extends Application
         button.setPrefWidth(123.0);
         button.setText("Change");
 
-        button0.setMnemonicParsing(false);
-        button0.setPrefHeight(35.0);
-        button0.setPrefWidth(123.0);
-        button0.setText("Ophalen");
+        btnOphalen.setMnemonicParsing(false);
+        btnOphalen.setPrefHeight(35.0);
+        btnOphalen.setPrefWidth(123.0);
+        btnOphalen.setText("Ophalen");
 
         hBox1.setPrefHeight(100.0);
         hBox1.setPrefWidth(282.0);
@@ -215,6 +223,16 @@ public class Gui extends Application
         button4.setText("Help");
         button4.setTextFill(javafx.scene.paint.Color.BLACK);
 
+
+
+        btnOphalen.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                FilerName();
+            }
+        });
+
+
         vBox0.getChildren().add(label);
         vBox0.getChildren().add(label0);
         vBox0.getChildren().add(label1);
@@ -228,7 +246,7 @@ public class Gui extends Application
         vBox.getChildren().add(hBox);
         vBox2.getChildren().add(separator);
         hBox0.getChildren().add(button);
-        hBox0.getChildren().add(button0);
+        hBox0.getChildren().add(btnOphalen);
         vBox2.getChildren().add(hBox0);
         hBox1.getChildren().add(button1);
         hBox1.getChildren().add(button2);
@@ -265,6 +283,51 @@ public class Gui extends Application
     }
 
 
+    public static void FilerName(){
+        String fileName;
+//                FileChooser fileChooser = new FileChooser();
+//                fileChooser.setTitle("Open Resource File");
+//                fileChooser.showOpenDialog(stage);
+
+
+
+        FileChooser fileChooser = new FileChooser();
+        //String userDirectoryString = System.getProperty("C:\\Users\\Levi Vlasblom\\Desktop\\schooltroep\\Avans Jaar 1\\1.3\\Proftaak-School\\Proftaak-1.3-School\\SimulatieProjectV_0.1\\Files");
+        //File userDirectory = new File(userDirectoryString);
+        //fileChooser.setInitialDirectory(userDirectory);
+        File selectedFile = fileChooser.showOpenDialog(null);
+
+        if (selectedFile != null) {
+            System.out.println("Found u my lord!");
+            fileName = selectedFile.getName();
+            System.out.println(fileName);
+
+            String line = null;
+
+            try {
+                FileReader fileReader = new FileReader( "Files" +"\\" +fileName);
+
+                BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+                while((line = bufferedReader.readLine()) != null) {
+                    System.out.println(line);
+                }
+
+                bufferedReader.close();
+            }
+            catch(FileNotFoundException ex) {
+                System.out.println(
+                        "Unable to open file '" +
+                                fileName + "'");
+            }
+            catch(IOException ex) {
+                System.out.println(
+                        "Error reading file '"
+                                + fileName + "'");
+            }
+        }
+
+    }
 
 
     public static void main(String[] args)
