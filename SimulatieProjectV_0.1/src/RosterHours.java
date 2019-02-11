@@ -3,14 +3,21 @@ import java.sql.Time;
 import java.util.ArrayList;
 
 public class RosterHours {
+//    Subject subject;
+//    Class schoolClass;
+//    Time startTime;
+//    Time endTime;
+//    Teacher teacher;
+//    Classroom classroom;
+
     Subject subject;
     Class schoolClass;
-    Time startTime;
-    Time endTime;
+    String startTime;
+    String endTime;
     Teacher teacher;
     Classroom classroom;
 
-    public RosterHours(Subject subject, Class schoolClass, Time startTime, Time endTime, Teacher teacher, Classroom classroom) {
+    public RosterHours(Subject subject, Class schoolClass, String startTime, String endTime, Teacher teacher, Classroom classroom) {
         this.subject = subject;
         this.schoolClass = schoolClass;
         this.startTime = startTime;
@@ -53,19 +60,19 @@ public class RosterHours {
         this.schoolClass = schoolClass;
     }
 
-    public Time getStartTime() {
+    public String getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Time startTime) {
+    public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
 
-    public Time getEndTime() {
+    public String getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Time endTime) {
+    public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
 

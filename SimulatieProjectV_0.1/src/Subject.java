@@ -8,6 +8,9 @@ public class Subject {
         this.name = name;
         this.teacher = teacher;
     }
+    public Subject(String name){
+        this.name = name;
+    }
 
     public String getName() {
         return name;

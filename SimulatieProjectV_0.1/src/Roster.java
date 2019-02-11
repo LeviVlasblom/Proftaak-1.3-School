@@ -3,34 +3,83 @@ import javafx.stage.FileChooser;
 import java.io.*;
 import java.sql.Date;
 import java.sql.Time;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Scanner;
 
 public class Roster {
     private Date day;
     private boolean Lunchbreak;
-    private ArrayList<RosterHours> rosterhours;
+    private ArrayList<RosterHours> period;
 
     public Roster(Date day, boolean lunchbreak) {
         this.day = day;
         Lunchbreak = lunchbreak;
     }
 
+    public Roster () {
+        this.period = new ArrayList<>();
+    }
+
+    @Override
+    public String toString() {
+        return "Rooster{" +
+                "lessen=" + period +
+                '}';
+    }
+
     public void readRosterHours ( String filename ) {
 
+        File file = new File("Files" + "\\" + filename);
 
+        ArrayList<RosterHours> period = new ArrayList<>();
+
+        Scanner s = null;
         try {
-            ObjectInputStream i = new ObjectInputStream( new FileInputStream( "Files" + "\\" + filename) );
+            s = new Scanner(file);
 
-            try {
-                ArrayList<RosterHours> RosterHours = (ArrayList<RosterHours>) i.readObject();
+            while ( s.hasNext() ) {
+                String line = s.nextLine();
 
-                this.rosterhours = RosterHours;
+                String data[] = line.split("/");
 
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
+                if ( data.length == 6 ) {
+
+
+                } else {
+                    System.out.println("Line could not be parsed: " + line);
+                }
+
+                Scanner ls = new Scanner(line);
+                ls.useDelimiter("/");
+
+                String klas = ls.next();
+                Class clas = new Class(klas);
+
+                String vak = ls.next();
+                Subject subject = new Subject(vak);
+
+                String docent = ls.next();
+                Teacher teacher = new Teacher(docent);
+
+                int lokaal = Integer.parseInt(ls.next());
+                Classroom classroom = new Classroom(lokaal);
+
+                String beginTijd = ls.next();
+                String eindTijd = ls.next();
+
+                RosterHours les = new RosterHours(subject, clas, beginTijd, eindTijd, teacher, classroom );
+
+                period.add(les);
+
+                this.period = period;
+                
+                System.out.println(period.toString());
             }
 
-        } catch (IOException e) {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }

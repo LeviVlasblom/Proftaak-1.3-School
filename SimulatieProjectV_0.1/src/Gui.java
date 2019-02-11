@@ -338,10 +338,12 @@ public class Gui extends Application {
             textAreaOutputBox.setText(rosterHour);
     }
 
+
     public static void FilerName(){
 
         Roster r = new Roster(null, false);
         r.openFile();
+        System.out.println("Rooster Text I/O: " + r);
 //        String fileName;
 ////                FileChooser fileChooser = new FileChooser();
 ////                fileChooser.setTitle("Open Resource File");

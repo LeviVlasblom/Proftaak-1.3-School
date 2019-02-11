@@ -1,12 +1,18 @@
 import java.util.ArrayList;
 
 public class Class {
+    private String name;
     private ArrayList<Student> students;
     private int classID;
 
-    public Class(ArrayList<Student> students, int classID) {
+    public Class(String name, ArrayList<Student> students, int classID) {
+        this.name = name;
         this.students = students;
         this.classID = classID;
+    }
+
+    public Class(String name){
+        this.name = name;
     }
 
     public ArrayList<Student> getStudents() {

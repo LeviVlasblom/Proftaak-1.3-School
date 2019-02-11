@@ -9,6 +9,10 @@ public class Classroom {
         this.floorNumber = floorNumber;
     }
 
+    public Classroom(int classNumber){
+        this.classNumber = classNumber;
+    }
+
     public int getClassNumber() {
         return classNumber;
     }
