@@ -1,16 +1,26 @@
-
 import java.lang.*;
-import java.util.*;
+
 
 import javafx.application.Application;
 import javafx.geometry.*;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.*;
-import javafx.scene.paint.*;
+
 import javafx.stage.Stage;
 
-import static javafx.application.Application.launch;
+
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+
+import javafx.stage.FileChooser;
+
+
+import java.io.*;
+
 
 public class Gui extends Application {
 
@@ -54,8 +64,10 @@ public class Gui extends Application {
     private Button buttonClear;
     private Button buttonHelp;
     private BorderPane borderpane;
+    private Label labelteacher;
     @Override
     public void start(Stage stage) {
+        labelteacher = new Label();
         borderpane = new BorderPane();
         vBox = new VBox();
         hBox = new HBox();
@@ -98,7 +110,7 @@ public class Gui extends Application {
         buttonHelp = new Button();
 
         borderpane.setPrefHeight(694.0);
-       borderpane.setPrefWidth(750.0);
+        borderpane.setPrefWidth(750.0);
         borderpane.setRotate(0.0);
 
         vBox.setAlignment(javafx.geometry.Pos.CENTER_LEFT);
@@ -305,6 +317,70 @@ public class Gui extends Application {
         stage.setScene(scene);
         stage.setTitle("School simulatie");
         stage.show();
+
+        buttonOphalen.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                FilerName();
+            }
+        });
+    }
+    public  void add(){
+        readInputBoxes();
+        //displayRosterHour();
+    }
+    public void readInputBoxes(){
+            String klas = textFieldKlas.getText();
+            String vak = textFieldVak.getText();
+            String beginTijd = textFieldBegintijd.getText();
+            String eindTijd = textFieldEindtijd.getText();
+            String rosterHour = beginTijd + "-" + eindTijd + "Lokaal: " + klas + "Vak: " + vak + "/n";
+            textAreaOutputBox.setText(rosterHour);
+    }
+
+    public static void FilerName(){
+        String fileName;
+//                FileChooser fileChooser = new FileChooser();
+//                fileChooser.setTitle("Open Resource File");
+//                fileChooser.showOpenDialog(stage);
+
+
+
+        FileChooser fileChooser = new FileChooser();
+        //String userDirectoryString = System.getProperty("C:\\Users\\Levi Vlasblom\\Desktop\\schooltroep\\Avans Jaar 1\\1.3\\Proftaak-School\\Proftaak-1.3-School\\SimulatieProjectV_0.1\\Files");
+        //File userDirectory = new File(userDirectoryString);
+        //fileChooser.setInitialDirectory(userDirectory);
+        File selectedFile = fileChooser.showOpenDialog(null);
+
+        if (selectedFile != null) {
+            System.out.println("Found u my lord!");
+            fileName = selectedFile.getName();
+            System.out.println(fileName);
+
+            String line = null;
+
+            try {
+                FileReader fileReader = new FileReader( "Files" +"\\" +fileName);
+
+                BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+                while((line = bufferedReader.readLine()) != null) {
+                    System.out.println(line);
+                }
+
+                bufferedReader.close();
+            }
+            catch(FileNotFoundException ex) {
+                System.out.println(
+                        "Unable to open file '" +
+                                fileName + "'");
+            }
+            catch(IOException ex) {
+                System.out.println(
+                        "Error reading file '"
+                                + fileName + "'");
+            }
+        }
 
     }
     public static void main(String[] args)
