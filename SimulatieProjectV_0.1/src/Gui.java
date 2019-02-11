@@ -13,6 +13,10 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.*;
+import java.sql.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Calendar;
 
 public class Gui extends Application
 {
@@ -284,49 +288,49 @@ public class Gui extends Application
 
 
     public static void FilerName(){
-        String fileName;
-//                FileChooser fileChooser = new FileChooser();
-//                fileChooser.setTitle("Open Resource File");
-//                fileChooser.showOpenDialog(stage);
 
 
+//        String fileName = "";
+//        FileChooser fileChooser = new FileChooser();
+//        String userDirectoryString = System.getProperty("user.home");
+//        File userDirectory = new File(userDirectoryString);
+//        fileChooser.setInitialDirectory(userDirectory);
+//        File selectedFile = fileChooser.showOpenDialog(null);
+//
+//
+//        if (selectedFile != null) {
+//            System.out.println("Found u my lord!");
+//            fileName = selectedFile.getName();
+//            System.out.println(fileName);
+//
+//            String line = null;
 
-        FileChooser fileChooser = new FileChooser();
-        //String userDirectoryString = System.getProperty("C:\\Users\\Levi Vlasblom\\Desktop\\schooltroep\\Avans Jaar 1\\1.3\\Proftaak-School\\Proftaak-1.3-School\\SimulatieProjectV_0.1\\Files");
-        //File userDirectory = new File(userDirectoryString);
-        //fileChooser.setInitialDirectory(userDirectory);
-        File selectedFile = fileChooser.showOpenDialog(null);
+            Roster r = new Roster(null , false);
+            r.openFile();
+            //try {
 
-        if (selectedFile != null) {
-            System.out.println("Found u my lord!");
-            fileName = selectedFile.getName();
-            System.out.println(fileName);
-
-            String line = null;
-
-            try {
-                FileReader fileReader = new FileReader( "Files" +"\\" +fileName);
-
-                BufferedReader bufferedReader = new BufferedReader(fileReader);
-
-                while((line = bufferedReader.readLine()) != null) {
-                    System.out.println(line);
-                }
-
-                bufferedReader.close();
-            }
-            catch(FileNotFoundException ex) {
-                System.out.println(
-                        "Unable to open file '" +
-                                fileName + "'");
-            }
-            catch(IOException ex) {
-                System.out.println(
-                        "Error reading file '"
-                                + fileName + "'");
-            }
-        }
-
+//                FileReader fileReader = new FileReader( "Files" +"\\" +fileName);
+//
+//                BufferedReader bufferedReader = new BufferedReader(fileReader);
+//
+//                while((line = bufferedReader.readLine()) != null) {
+//                    System.out.println(line);
+//                }
+//
+//                bufferedReader.close();
+//            }
+//            catch(FileNotFoundException ex) {
+//                System.out.println(
+//                        "Unable to open file '" +
+//                                fileName + "'");
+//            }
+//            catch(IOException ex) {
+//                System.out.println(
+//                        "Error reading file '"
+//                                + fileName + "'");
+//            }
+        //}
+        //return fileName;
     }
 
 

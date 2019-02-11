@@ -1,5 +1,6 @@
 import java.io.*;
 import java.sql.Time;
+import java.util.ArrayList;
 
 public class RosterHours {
     Subject subject;
@@ -18,33 +19,8 @@ public class RosterHours {
         this.classroom = classroom;
     }
 
-    public void RetrieveRoster(){
 
-        //String foundFile = Gui.FilerName();
-        String line = null;
 
-//        try {
-//            FileReader fileReader = new FileReader(foundFile);
-//
-//            BufferedReader bufferedReader = new BufferedReader(fileReader);
-//
-//            while((line = bufferedReader.readLine()) != null) {
-//                System.out.println(line);
-//            }
-//
-//            bufferedReader.close();
-//        }
-//        catch(FileNotFoundException ex) {
-//            System.out.println(
-//                    "Unable to open file '" +
-//                            foundFile + "'");
-//        }
-//        catch(IOException ex) {
-//            System.out.println(
-//                    "Error reading file '"
-//                            + foundFile + "'");
-//        }
-    }
 
     public void writeRosterHours(Subject subject, Class schoolClass, Time startTime, Time endTime, Teacher teacher, Classroom classroom) {
         File file = new File("src//rosterhours.txt");
