@@ -2,10 +2,14 @@ import java.lang.*;
 
 
 import javafx.application.Application;
+import javafx.beans.value.ObservableListValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.geometry.*;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 
@@ -20,10 +24,12 @@ import javafx.stage.FileChooser;
 
 
 import java.io.*;
+import java.util.ArrayList;
 
 
 public class Gui extends Application {
 
+    private ObservableList<RosterHours> ob;
     private  VBox vBox;
     private  HBox hBox;
     private  VBox vBox0;
@@ -31,6 +37,7 @@ public class Gui extends Application {
     private  Label labelVak;
     private  Label labelBeginTijd;
     private  Label labelEindtijd;
+    private  Label labelDocent;
     private  VBox vBox1;
     private  TextField textFieldKlas;
     private  TextField textFieldVak;
@@ -59,7 +66,7 @@ public class Gui extends Application {
     private Label label16;
     private Label label17;
     private Label label18;
-    private TextArea textAreaOutputBox;
+    private TableView<RosterHours> tableViewRoster;
     private HBox hBox3;
     private Button buttonClear;
     private Button buttonHelp;
@@ -67,6 +74,7 @@ public class Gui extends Application {
     private Label labelteacher;
     @Override
     public void start(Stage stage) {
+        ob = FXCollections.observableList(new ArrayList<RosterHours>());
         labelteacher = new Label();
         borderpane = new BorderPane();
         vBox = new VBox();
@@ -76,6 +84,7 @@ public class Gui extends Application {
         labelVak = new Label();
         labelBeginTijd = new Label();
         labelEindtijd = new Label();
+        labelDocent = new Label();
         vBox1 = new VBox();
         textFieldKlas = new TextField();
         textFieldVak = new TextField();
@@ -104,7 +113,32 @@ public class Gui extends Application {
         label16 = new Label();
         label17 = new Label();
         label18 = new Label();
-        textAreaOutputBox = new TextArea();
+        tableViewRoster = new TableView<RosterHours>();
+        TableColumn<RosterHours, String> klasCol //
+                = new TableColumn<RosterHours, String>("Klas");
+        TableColumn<RosterHours, String> vakCol //
+                = new TableColumn<RosterHours, String>("Vak");
+        TableColumn<RosterHours, String> leraarCol //
+                = new TableColumn<RosterHours, String>("Leraar");
+        TableColumn<RosterHours, String> lokaalCol //
+                = new TableColumn<RosterHours, String>("Lokaal");
+        TableColumn<RosterHours, String> tijdCol //
+                = new TableColumn<RosterHours, String>("Tijd");
+        TableColumn<RosterHours, String> begTijdCol //
+                = new TableColumn<RosterHours, String>("Start Tijd");
+        TableColumn<RosterHours, String> eindTijdCol //
+                = new TableColumn<RosterHours, String>("Eind Tijd");
+        tijdCol.getColumns().addAll(begTijdCol, eindTijdCol);
+
+        tableViewRoster.getColumns().addAll(klasCol, vakCol, leraarCol, lokaalCol, tijdCol);
+
+        klasCol.setCellValueFactory(new PropertyValueFactory<>("schoolClass"));
+        vakCol.setCellValueFactory(new PropertyValueFactory<>("subject"));
+        leraarCol.setCellValueFactory(new PropertyValueFactory<>("teacher"));
+        lokaalCol.setCellValueFactory(new PropertyValueFactory<>("classroom"));
+        begTijdCol.setCellValueFactory(new PropertyValueFactory<>("startTime"));
+        eindTijdCol.setCellValueFactory(new PropertyValueFactory<>("endTime"));
+
         hBox3 = new HBox();
         buttonClear = new Button();
         buttonHelp = new Button();
@@ -145,6 +179,11 @@ public class Gui extends Application {
         labelEindtijd.setPrefHeight(22.0);
         labelEindtijd.setPrefWidth(72.0);
         labelEindtijd.setText("Eindtijd");
+
+        labelDocent.setId("labelDocent");
+        labelDocent.setPrefHeight(22.0);
+        labelDocent.setPrefWidth(100.0);
+        labelDocent.setText("labelDocent");
 
         vBox1.setPrefHeight(238.0);
         vBox1.setPrefWidth(158.0);
@@ -202,11 +241,11 @@ public class Gui extends Application {
         borderpane.setPadding(new Insets(10.0, 0.0, 10.0, 10.0));
 
         vBox3.setPrefHeight(674.0);
-        vBox3.setPrefWidth(460.0);
+        vBox3.setPrefWidth(760.0);
 
         hBox2.setMinHeight(325.0);
         hBox2.setPrefHeight(650.0);
-        hBox2.setPrefWidth(295.0);
+        hBox2.setPrefWidth(495.0);
 
         separator0.setOrientation(javafx.geometry.Orientation.VERTICAL);
         separator0.setPrefHeight(2.0);
@@ -249,13 +288,13 @@ public class Gui extends Application {
         label18.setId("label18");
         label18.setText("18:00");
 
-        textAreaOutputBox.setId("textAreaOutputBox");
-        textAreaOutputBox.setPrefHeight(612.0);
-        textAreaOutputBox.setPrefWidth(323.0);
-        textAreaOutputBox.setWrapText(true);
+        tableViewRoster.setId("textAreaOutputBox");
+        tableViewRoster.setPrefHeight(612.0);
+        tableViewRoster.setPrefWidth(523.0);
+        //textAreaOutputBox.setWrapText(true);
 
         hBox3.setPrefHeight(100.0);
-        hBox3.setPrefWidth(200.0);
+        hBox3.setPrefWidth(500.0);
 
         buttonClear.setId("buttonClear");
         buttonClear.setMnemonicParsing(false);
@@ -304,16 +343,18 @@ public class Gui extends Application {
         vBox4.getChildren().add(label17);
         vBox4.getChildren().add(label18);
         hBox2.getChildren().add(vBox4);
-        hBox2.getChildren().add(textAreaOutputBox);
+        hBox2.getChildren().add(tableViewRoster);
         vBox3.getChildren().add(hBox2);
         hBox3.getChildren().add(buttonClear);
         hBox3.getChildren().add(buttonHelp);
         vBox3.getChildren().add(hBox3);
+
+        tableViewRoster.setItems(ob);
         BorderPane pane = new BorderPane();
 
         pane.setLeft(vBox);
         pane.setRight(vBox3);
-        Scene scene = new Scene(pane);
+        Scene scene = new Scene(pane, 1050, 694.0);
         stage.setScene(scene);
         stage.setTitle("School simulatie");
         stage.show();
@@ -322,6 +363,14 @@ public class Gui extends Application {
             @Override
             public void handle(ActionEvent event) {
                 FilerName();
+                tableViewRoster.setItems(ob);
+            }
+        });
+
+        buttonClear.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                tableViewRoster.getItems().clear();
             }
         });
     }
@@ -335,59 +384,21 @@ public class Gui extends Application {
             String beginTijd = textFieldBegintijd.getText();
             String eindTijd = textFieldEindtijd.getText();
             String rosterHour = beginTijd + "-" + eindTijd + "Lokaal: " + klas + "Vak: " + vak + "/n";
-            textAreaOutputBox.setText(rosterHour);
+            //textAreaOutputBox.setText(rosterHour);
     }
 
 
-    public static void FilerName(){
+    public void FilerName(){
 
         Roster r = new Roster(null, false);
         r.openFile();
-        System.out.println("Rooster Text I/O: " + r.toString());
-//        String fileName;
-////                FileChooser fileChooser = new FileChooser();
-////                fileChooser.setTitle("Open Resource File");
-////                fileChooser.showOpenDialog(stage);
-//
-//
-//
-//        FileChooser fileChooser = new FileChooser();
-//        //String userDirectoryString = System.getProperty("C:\\Users\\Levi Vlasblom\\Desktop\\schooltroep\\Avans Jaar 1\\1.3\\Proftaak-School\\Proftaak-1.3-School\\SimulatieProjectV_0.1\\Files");
-//        //File userDirectory = new File(userDirectoryString);
-//        //fileChooser.setInitialDirectory(userDirectory);
-//        File selectedFile = fileChooser.showOpenDialog(null);
-//
-//        if (selectedFile != null) {
-//            System.out.println("Found u my lord!");
-//            fileName = selectedFile.getName();
-//            System.out.println(fileName);
-//
-//            String line = null;
-//
-//            try {
-//                FileReader fileReader = new FileReader( "Files" +"\\" +fileName);
-//
-//                BufferedReader bufferedReader = new BufferedReader(fileReader);
-//
-//                while((line = bufferedReader.readLine()) != null) {
-//                    System.out.println(line);
-//                }
-//
-//                bufferedReader.close();
-//            }
-//            catch(FileNotFoundException ex) {
-//                System.out.println(
-//                        "Unable to open file '" +
-//                                fileName + "'");
-//            }
-//            catch(IOException ex) {
-//                System.out.println(
-//                        "Error reading file '"
-//                                + fileName + "'");
-//            }
-//        }
 
+        ob = FXCollections.observableList(r.getPeriod());
+        System.out.println("Rooster Text I/O: " + r.toString());
     }
+
+
+
     public static void main(String[] args)
     {
         launch(Gui.class);

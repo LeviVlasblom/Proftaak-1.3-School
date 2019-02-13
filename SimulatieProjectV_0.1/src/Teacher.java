@@ -13,13 +13,14 @@ public class Teacher {
         this.teacherID = teacherID;
     }
 
+    public Teacher(String name){
+        this.name = name;
+    }
+
     public String toString() {
         return "" + name;
     }
 
-    public Teacher(String name){
-        this.name = name;
-    }
     public void writeTeachers (int teacherID, String name, Subject subject){
         File file = new File("src//teachers.txt");
         PrintWriter output = null;

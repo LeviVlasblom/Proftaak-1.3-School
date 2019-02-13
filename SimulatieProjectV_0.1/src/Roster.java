@@ -1,3 +1,5 @@
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.stage.FileChooser;
 
 import java.io.*;
@@ -80,6 +82,12 @@ public class Roster {
         }
     }
 
+    public ObservableList<RosterHours> getList(){
+
+        ObservableList<RosterHours> list = FXCollections.observableList(this.period);
+        return list;
+    }
+
     public void openFile() {
         String fileName = "";
         FileChooser fileChooser = new FileChooser();
@@ -119,6 +127,8 @@ public class Roster {
                                 + fileName + "'");
             }
         }
-
+    }
+    public ArrayList<RosterHours> getPeriod(){
+        return this.period;
     }
 }
