@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="SimulatieProjectV_0.1" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="Gui" />
+    <module name="SimulatieProjectV_0.1" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
