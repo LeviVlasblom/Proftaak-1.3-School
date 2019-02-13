@@ -26,7 +26,10 @@ public class RosterHours {
         this.classroom = classroom;
     }
 
-
+    public String toString() {
+        return " Vak: " + subject + " Klas: " + schoolClass + " Begin Tijd " + startTime + " Eind Tijd "
+                + endTime + " Docent " + teacher + " Lokaal " + classroom;
+    }
 
 
     public void writeRosterHours(Subject subject, Class schoolClass, Time startTime, Time endTime, Teacher teacher, Classroom classroom) {

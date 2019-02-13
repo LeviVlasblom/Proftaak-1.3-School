@@ -13,6 +13,10 @@ public class Teacher {
         this.teacherID = teacherID;
     }
 
+    public String toString() {
+        return "" + name;
+    }
+
     public Teacher(String name){
         this.name = name;
     }

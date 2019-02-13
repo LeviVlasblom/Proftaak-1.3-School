@@ -15,6 +15,10 @@ public class Class {
         this.name = name;
     }
 
+    public String toString() {
+        return "" + name;
+    }
+
     public ArrayList<Student> getStudents() {
         return students;
     }

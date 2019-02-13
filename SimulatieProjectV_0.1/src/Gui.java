@@ -343,7 +343,7 @@ public class Gui extends Application {
 
         Roster r = new Roster(null, false);
         r.openFile();
-        System.out.println("Rooster Text I/O: " + r);
+        System.out.println("Rooster Text I/O: " + r.toString());
 //        String fileName;
 ////                FileChooser fileChooser = new FileChooser();
 ////                fileChooser.setTitle("Open Resource File");

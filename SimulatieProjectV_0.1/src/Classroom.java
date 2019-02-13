@@ -13,6 +13,10 @@ public class Classroom {
         this.classNumber = classNumber;
     }
 
+    public String toString() {
+        return "" + classNumber;
+    }
+
     public int getClassNumber() {
         return classNumber;
     }

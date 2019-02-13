@@ -33,10 +33,9 @@ public class Roster {
     public void readRosterHours ( String filename ) {
 
         File file = new File("Files" + "\\" + filename);
-
         ArrayList<RosterHours> period = new ArrayList<>();
-
         Scanner s = null;
+
         try {
             s = new Scanner(file);
 
@@ -71,11 +70,8 @@ public class Roster {
                 String eindTijd = ls.next();
 
                 RosterHours les = new RosterHours(subject, clas, beginTijd, eindTijd, teacher, classroom );
-
                 period.add(les);
-
                 this.period = period;
-                
                 System.out.println(period.toString());
             }
 
