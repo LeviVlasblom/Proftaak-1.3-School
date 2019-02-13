@@ -38,11 +38,14 @@ public class Gui extends Application {
     private  Label labelBeginTijd;
     private  Label labelEindtijd;
     private  Label labelDocent;
+    private  Label labelLokaal;
     private  VBox vBox1;
     private  TextField textFieldKlas;
     private  TextField textFieldVak;
     private  TextField textFieldBegintijd;
     private  TextField textFieldEindtijd;
+    private  TextField textFieldDocent;
+    private  TextField textFieldLokaal;
     private  VBox vBox2;
     private  Separator separator;
     private HBox hBox0;
@@ -85,11 +88,14 @@ public class Gui extends Application {
         labelBeginTijd = new Label();
         labelEindtijd = new Label();
         labelDocent = new Label();
+        labelLokaal = new Label();
         vBox1 = new VBox();
         textFieldKlas = new TextField();
         textFieldVak = new TextField();
         textFieldBegintijd = new TextField();
         textFieldEindtijd = new TextField();
+        textFieldDocent = new TextField();
+        textFieldLokaal = new TextField();
         vBox2 = new VBox();
         separator = new Separator();
         hBox0 = new HBox();
@@ -157,8 +163,8 @@ public class Gui extends Application {
         hBox.setPrefWidth(309.0);
 
         vBox0.setPrefHeight(238.0);
-        vBox0.setPrefWidth(86.0);
-        vBox0.setSpacing(15.0);
+        vBox0.setPrefWidth(92.0);
+        vBox0.setSpacing(27.0);
 
         labelKlas.setId("labelKlas");
         labelKlas.setPrefHeight(22.0);
@@ -167,23 +173,28 @@ public class Gui extends Application {
 
         labelVak.setId("labelVak");
         labelVak.setPrefHeight(22.0);
-        labelVak.setPrefWidth(29.0);
+        labelVak.setPrefWidth(56.0);
         labelVak.setText("Vak");
 
         labelBeginTijd.setId("labelBegintijd");
         labelBeginTijd.setPrefHeight(22.0);
-        labelBeginTijd.setPrefWidth(56.0);
+        labelBeginTijd.setPrefWidth(100.0);
         labelBeginTijd.setText("Begintijd");
 
         labelEindtijd.setId("labelEindtijd");
         labelEindtijd.setPrefHeight(22.0);
-        labelEindtijd.setPrefWidth(72.0);
+        labelEindtijd.setPrefWidth(100.0);
         labelEindtijd.setText("Eindtijd");
 
         labelDocent.setId("labelDocent");
         labelDocent.setPrefHeight(22.0);
-        labelDocent.setPrefWidth(100.0);
-        labelDocent.setText("labelDocent");
+        labelDocent.setPrefWidth(120.0);
+        labelDocent.setText("Docent");
+
+        labelLokaal.setId("labelLokaal");
+        labelLokaal.setPrefHeight(22.0);
+        labelLokaal.setPrefWidth(100.0);
+        labelLokaal.setText("Lokaal");
 
         vBox1.setPrefHeight(238.0);
         vBox1.setPrefWidth(158.0);
@@ -200,6 +211,12 @@ public class Gui extends Application {
 
         textFieldEindtijd.setId("textFieldEindtijd");
         textFieldEindtijd.setPrefWidth(158.0);
+
+        textFieldDocent.setId("textFieldDocent");
+        textFieldDocent.setPrefWidth(158.0);
+
+        textFieldLokaal.setId("textFieldLokaal");
+        textFieldLokaal.setPrefWidth(158.0);
 
         vBox2.setPrefHeight(183.0);
         vBox2.setPrefWidth(471.0);
@@ -315,11 +332,15 @@ public class Gui extends Application {
         vBox0.getChildren().add(labelVak);
         vBox0.getChildren().add(labelBeginTijd);
         vBox0.getChildren().add(labelEindtijd);
+        vBox0.getChildren().add(labelDocent);
+        vBox0.getChildren().add(labelLokaal);
         hBox.getChildren().add(vBox0);
         vBox1.getChildren().add(textFieldKlas);
         vBox1.getChildren().add(textFieldVak);
         vBox1.getChildren().add(textFieldBegintijd);
         vBox1.getChildren().add(textFieldEindtijd);
+        vBox1.getChildren().add(textFieldDocent);
+        vBox1.getChildren().add(textFieldLokaal);
         hBox.getChildren().add(vBox1);
         vBox.getChildren().add(hBox);
         vBox2.getChildren().add(separator);
@@ -373,18 +394,40 @@ public class Gui extends Application {
                 tableViewRoster.getItems().clear();
             }
         });
+
+        buttonAdd.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                readInputBoxes();
+            }
+        });
+        buttonOpslaan.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                RosterHours.saveRosterHours(ob);
+            }
+        });
     }
-    public  void add(){
-        readInputBoxes();
-        //displayRosterHour();
-    }
+
+
     public void readInputBoxes(){
-            String klas = textFieldKlas.getText();
-            String vak = textFieldVak.getText();
-            String beginTijd = textFieldBegintijd.getText();
-            String eindTijd = textFieldEindtijd.getText();
-            String rosterHour = beginTijd + "-" + eindTijd + "Lokaal: " + klas + "Vak: " + vak + "/n";
-            //textAreaOutputBox.setText(rosterHour);
+        String klas = textFieldKlas.getText();
+        String vak = textFieldVak.getText();
+        String beginTijd = textFieldBegintijd.getText();
+        String eindTijd = textFieldEindtijd.getText();
+        String docent = textFieldDocent.getText();
+        int lokaal = Integer.parseInt(textFieldLokaal.getText());
+
+        ob.add(new RosterHours(new Subject(vak), new Class(klas), beginTijd, eindTijd, new Teacher(docent),new Classroom(lokaal)));
+
+        textFieldKlas.clear();
+        textFieldVak.clear();
+        textFieldBegintijd.clear();
+        textFieldEindtijd.clear();
+        textFieldDocent.clear();
+        textFieldLokaal.clear();
+        //String rosterHour = beginTijd + "-" + eindTijd + "Lokaal: " + klas + "Vak: " + vak + "/n";
+        //textAreaOutputBox.setText(rosterHour);
     }
 
 

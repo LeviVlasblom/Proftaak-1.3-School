@@ -5,6 +5,8 @@ public class Class {
     private ArrayList<Student> students;
     private int classID;
 
+
+
     public Class(String name, ArrayList<Student> students, int classID) {
         this.name = name;
         this.students = students;
@@ -33,5 +35,13 @@ public class Class {
 
     public void setClassID(int classID) {
         this.classID = classID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

@@ -1,3 +1,5 @@
+import javafx.collections.ObservableList;
+
 import java.io.*;
 import java.sql.Time;
 import java.util.ArrayList;
@@ -32,13 +34,35 @@ public class RosterHours {
     }
 
 
-    public void writeRosterHours(Subject subject, Class schoolClass, Time startTime, Time endTime, Teacher teacher, Classroom classroom) {
-        File file = new File("src//rosterhours.txt");
+//    public void writeRosterHours(Subject subject, Class schoolClass, Time startTime, Time endTime, Teacher teacher, Classroom classroom) {
+//        File file = new File("src//rosterhours.txt");
+//        PrintWriter output = null;
+//        try {
+//            output = new PrintWriter(file);
+//            String rosterHourDataFormat = schoolClass.getClassID() + "/" + subject.getName() + "/" + teacher.getName() + "/" + classroom.getClassNumber() + "/" + startTime + "/" + endTime;
+//            output.println(rosterHourDataFormat);
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } finally {
+//            assert output != null;
+//            output.close();
+//        }
+//    }
+
+    public String writeRosterHours() {
+
+          return schoolClass.getName() + "/" + subject.getName() + "/" + teacher.getName() + "/" + classroom.getClassNumber() + "/" + startTime + "/" + endTime;
+
+    }
+
+    public static void saveRosterHours(ObservableList<RosterHours> list){
+        File file = new File("Files//RosterHours.txt");
         PrintWriter output = null;
         try {
             output = new PrintWriter(file);
-            String rosterHourDataFormat = schoolClass.getClassID() + "/" + subject.getName() + "/" + teacher.getName() + "/" + classroom.getClassNumber() + "/" + startTime + "/" + endTime;
-            output.println(rosterHourDataFormat);
+            for(RosterHours rosterHours : list){
+                output.println(rosterHours.writeRosterHours());
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } finally {
