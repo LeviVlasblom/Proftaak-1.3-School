@@ -434,25 +434,45 @@ public class Gui extends Application {
     }
 
     public void readInputBoxes(){
-        String klas = textFieldKlas.getText();
-        String vak = textFieldVak.getText();
-        String beginTijd = textFieldBegintijd.getText();
-        String eindTijd = textFieldEindtijd.getText();
-        String docent = comboBoxTeacher.getValue().toString();
-        String lokaal = textFieldLokaal.getText();
 
-        obr.add(new RosterHours(new Subject(vak), new Class(klas), beginTijd, eindTijd, new Teacher(docent),new Classroom(lokaal)));
+        if (validation() == true){
+            String klas = textFieldKlas.getText();
+            String vak = textFieldVak.getText();
+            String beginTijd = textFieldBegintijd.getText();
+            String eindTijd = textFieldEindtijd.getText();
+            String docent = comboBoxTeacher.getValue().toString();
+            String lokaal = textFieldLokaal.getText();
 
-        textFieldKlas.clear();
-        textFieldVak.clear();
-        textFieldBegintijd.clear();
-        textFieldEindtijd.clear();
-        textFieldDocent.clear();
-        textFieldLokaal.clear();
+            obr.add(new RosterHours(new Subject(vak), new Class(klas), beginTijd, eindTijd, new Teacher(docent),new Classroom(lokaal)));
+
+            textFieldKlas.clear();
+            textFieldVak.clear();
+            textFieldBegintijd.clear();
+            textFieldEindtijd.clear();
+            textFieldDocent.clear();
+            textFieldLokaal.clear();
+        }
         //String rosterHour = beginTijd + "-" + eindTijd + "Lokaal: " + klas + "Vak: " + vak + "/n";
         //textAreaOutputBox.setText(rosterHour);
     }
 
+    public boolean validation(){
+
+        if (textFieldKlas.getText() == null || textFieldKlas.getText().trim().isEmpty() ||
+                textFieldVak.getText() == null || textFieldVak.getText().trim().isEmpty() ||
+                textFieldBegintijd.getText() == null || textFieldBegintijd.getText().trim().isEmpty() ||
+                textFieldEindtijd.getText() == null || textFieldEindtijd.getText().trim().isEmpty() ||
+                textFieldLokaal.getText() == null || textFieldLokaal.getText().trim().isEmpty() ||
+                comboBoxTeacher.getValue().toString() == null || comboBoxTeacher.getValue().toString().trim().isEmpty()) {
+            Alert fail= new Alert(Alert.AlertType.WARNING);
+            fail.setHeaderText("failure");
+            fail.setContentText("One or more fields are empty!");
+            fail.showAndWait();
+
+            return false ;
+        }
+        return true;
+    }
 
     public void FilerName(){
 
