@@ -23,6 +23,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 
 
+import javax.swing.*;
 import java.io.*;
 import java.util.ArrayList;
 
@@ -417,6 +418,14 @@ public class Gui extends Application {
             @Override
             public void handle(ActionEvent event) {
                 RosterHours.saveRosterHours(obr);
+            }
+        });
+
+        buttonHelp.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                JOptionPane.showMessageDialog(null, "Press ophalen om een bestand te selecteren en roosters te vormen.\nDruk op Add om een nieuw roosteruur in the voegen. \nDruk op clear om het rooster te clearen. \n                                       ©B1 Avans Breda", "HELP", JOptionPane.INFORMATION_MESSAGE);
+
             }
         });
     }
