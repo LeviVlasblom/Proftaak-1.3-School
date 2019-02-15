@@ -65,7 +65,7 @@ public class Roster {
                 String docent = ls.next();
                 Teacher teacher = new Teacher(docent);
 
-                int lokaal = Integer.parseInt(ls.next());
+                String lokaal = ls.next();
                 Classroom classroom = new Classroom(lokaal);
 
                 String beginTijd = ls.next();

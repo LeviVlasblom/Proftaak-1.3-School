@@ -29,7 +29,9 @@ import java.util.ArrayList;
 
 public class Gui extends Application {
 
-    private ObservableList<RosterHours> ob;
+    private ObservableList<RosterHours> obr;
+    private ObservableList<Teacher> obt;
+    private ComboBox comboBoxTeacher;
     private  VBox vBox;
     private  HBox hBox;
     private  VBox vBox0;
@@ -77,7 +79,9 @@ public class Gui extends Application {
     private Label labelteacher;
     @Override
     public void start(Stage stage) {
-        ob = FXCollections.observableList(new ArrayList<RosterHours>());
+        obr = FXCollections.observableList(new ArrayList<RosterHours>());
+        obt = FXCollections.observableList(new ArrayList<Teacher>());
+        comboBoxTeacher = new ComboBox(obt);
         labelteacher = new Label();
         borderpane = new BorderPane();
         vBox = new VBox();
@@ -212,8 +216,11 @@ public class Gui extends Application {
         textFieldEindtijd.setId("textFieldEindtijd");
         textFieldEindtijd.setPrefWidth(158.0);
 
-        textFieldDocent.setId("textFieldDocent");
-        textFieldDocent.setPrefWidth(158.0);
+        //textFieldDocent.setId("textFieldDocent");
+        //textFieldDocent.setPrefWidth(158.0);
+
+        comboBoxTeacher.setId("comboBox");
+        comboBoxTeacher.setPrefWidth(158.0);
 
         textFieldLokaal.setId("textFieldLokaal");
         textFieldLokaal.setPrefWidth(158.0);
@@ -307,7 +314,7 @@ public class Gui extends Application {
 
         tableViewRoster.setId("textAreaOutputBox");
         tableViewRoster.setPrefHeight(612.0);
-        tableViewRoster.setPrefWidth(523.0);
+        tableViewRoster.setPrefWidth(500.0);
         //textAreaOutputBox.setWrapText(true);
 
         hBox3.setPrefHeight(100.0);
@@ -339,7 +346,8 @@ public class Gui extends Application {
         vBox1.getChildren().add(textFieldVak);
         vBox1.getChildren().add(textFieldBegintijd);
         vBox1.getChildren().add(textFieldEindtijd);
-        vBox1.getChildren().add(textFieldDocent);
+        //vBox1.getChildren().add(textFieldDocent);
+        vBox1.getChildren().add(comboBoxTeacher);
         vBox1.getChildren().add(textFieldLokaal);
         hBox.getChildren().add(vBox1);
         vBox.getChildren().add(hBox);
@@ -352,25 +360,29 @@ public class Gui extends Application {
         vBox2.getChildren().add(hBox1);
         vBox.getChildren().add(vBox2);
         hBox2.getChildren().add(separator0);
-        vBox4.getChildren().add(label8);
-        vBox4.getChildren().add(label9);
-        vBox4.getChildren().add(label10);
-        vBox4.getChildren().add(Label11);
-        vBox4.getChildren().add(label12);
-        vBox4.getChildren().add(label13);
-        vBox4.getChildren().add(label14);
-        vBox4.getChildren().add(label15);
-        vBox4.getChildren().add(label16);
-        vBox4.getChildren().add(label17);
-        vBox4.getChildren().add(label18);
-        hBox2.getChildren().add(vBox4);
+//        vBox4.getChildren().add(label8);
+//        vBox4.getChildren().add(label9);
+//        vBox4.getChildren().add(label10);
+//        vBox4.getChildren().add(Label11);
+//        vBox4.getChildren().add(label12);
+//        vBox4.getChildren().add(label13);
+//        vBox4.getChildren().add(label14);
+//        vBox4.getChildren().add(label15);
+//        vBox4.getChildren().add(label16);
+//        vBox4.getChildren().add(label17);
+//        vBox4.getChildren().add(label18);
+//        hBox2.getChildren().add(vBox4);
         hBox2.getChildren().add(tableViewRoster);
         vBox3.getChildren().add(hBox2);
         hBox3.getChildren().add(buttonClear);
         hBox3.getChildren().add(buttonHelp);
         vBox3.getChildren().add(hBox3);
 
-        tableViewRoster.setItems(ob);
+        //startup Methoden
+        listTeachers();
+        standardRoster();
+        tableViewRoster.setItems(obr);
+        comboBoxTeacher.setItems(obt);
         BorderPane pane = new BorderPane();
 
         pane.setLeft(vBox);
@@ -384,7 +396,7 @@ public class Gui extends Application {
             @Override
             public void handle(ActionEvent event) {
                 FilerName();
-                tableViewRoster.setItems(ob);
+                tableViewRoster.setItems(obr);
             }
         });
 
@@ -404,21 +416,32 @@ public class Gui extends Application {
         buttonOpslaan.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                RosterHours.saveRosterHours(ob);
+                RosterHours.saveRosterHours(obr);
             }
         });
     }
 
+    public void standardRoster(){
+        Roster roster = new Roster();
+        roster.readRosterHours("StockHours.txt");
+        obr = FXCollections.observableList(roster.getPeriod());
+    }
+
+    public void listTeachers(){
+        Teacher teacher = new Teacher();
+        teacher.readTeachers("Docenten.txt");
+        obt = FXCollections.observableList(teacher.getTeacher());
+    }
 
     public void readInputBoxes(){
         String klas = textFieldKlas.getText();
         String vak = textFieldVak.getText();
         String beginTijd = textFieldBegintijd.getText();
         String eindTijd = textFieldEindtijd.getText();
-        String docent = textFieldDocent.getText();
-        int lokaal = Integer.parseInt(textFieldLokaal.getText());
+        String docent = comboBoxTeacher.getValue().toString();
+        String lokaal = textFieldLokaal.getText();
 
-        ob.add(new RosterHours(new Subject(vak), new Class(klas), beginTijd, eindTijd, new Teacher(docent),new Classroom(lokaal)));
+        obr.add(new RosterHours(new Subject(vak), new Class(klas), beginTijd, eindTijd, new Teacher(docent),new Classroom(lokaal)));
 
         textFieldKlas.clear();
         textFieldVak.clear();
@@ -436,7 +459,7 @@ public class Gui extends Application {
         Roster r = new Roster(null, false);
         r.openFile();
 
-        ob = FXCollections.observableList(r.getPeriod());
+        obr = FXCollections.observableList(r.getPeriod());
         System.out.println("Rooster Text I/O: " + r.toString());
     }
 

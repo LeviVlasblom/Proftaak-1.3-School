@@ -1,15 +1,15 @@
 public class Classroom {
-    private int classNumber;
+    private String classNumber;
     private int seats;
     private int floorNumber;
 
-    public Classroom(int classNumber, int seats, int floorNumber) {
+    public Classroom(String classNumber, int seats, int floorNumber) {
         this.classNumber = classNumber;
         this.seats = seats;
         this.floorNumber = floorNumber;
     }
 
-    public Classroom(int classNumber){
+    public Classroom(String classNumber){
         this.classNumber = classNumber;
     }
 
@@ -17,11 +17,11 @@ public class Classroom {
         return "" + classNumber;
     }
 
-    public int getClassNumber() {
+    public String getClassNumber() {
         return classNumber;
     }
 
-    public void setClassNumber(int classNumber) {
+    public void setClassNumber(String classNumber) {
         this.classNumber = classNumber;
     }
 
