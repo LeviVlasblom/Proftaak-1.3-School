@@ -1,5 +1,4 @@
-1b/Wiskunde/Etienne/420/9:45/10:50/
-2b/Wiskunde/Etienne/420/9:45/10:50/
-1a/p&oc/Jessica/200/9:45/10:50/
-2a/project/Hans/11/9:45/10:50/
-1b/2DGraphics/Etienne/220/11:00/12:00/
+B/Wiskunde/Etienne/420/9:45/10:50/
+A/p&oc/Jessica/200/9:45/10:50/
+C/project/Hans/11/9:45/10:50/
+B/2DGraphics/Etienne/220/11:00/12:00/

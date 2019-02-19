@@ -361,18 +361,6 @@ public class Gui extends Application {
         vBox2.getChildren().add(hBox1);
         vBox.getChildren().add(vBox2);
         hBox2.getChildren().add(separator0);
-//        vBox4.getChildren().add(label8);
-//        vBox4.getChildren().add(label9);
-//        vBox4.getChildren().add(label10);
-//        vBox4.getChildren().add(Label11);
-//        vBox4.getChildren().add(label12);
-//        vBox4.getChildren().add(label13);
-//        vBox4.getChildren().add(label14);
-//        vBox4.getChildren().add(label15);
-//        vBox4.getChildren().add(label16);
-//        vBox4.getChildren().add(label17);
-//        vBox4.getChildren().add(label18);
-//        hBox2.getChildren().add(vBox4);
         hBox2.getChildren().add(tableViewRoster);
         vBox3.getChildren().add(hBox2);
         hBox3.getChildren().add(buttonClear);
@@ -390,7 +378,7 @@ public class Gui extends Application {
         pane.setRight(vBox3);
         Scene scene = new Scene(pane, 1050, 694.0);
         stage.setScene(scene);
-        stage.setTitle("School simulatie");
+        stage.setTitle("Rooster Simulatie");
         stage.show();
 
         buttonOphalen.setOnAction(new EventHandler<ActionEvent>() {
@@ -461,8 +449,6 @@ public class Gui extends Application {
             textFieldDocent.clear();
             textFieldLokaal.clear();
         }
-        //String rosterHour = beginTijd + "-" + eindTijd + "Lokaal: " + klas + "Vak: " + vak + "/n";
-        //textAreaOutputBox.setText(rosterHour);
     }
 
     public boolean validation(){
