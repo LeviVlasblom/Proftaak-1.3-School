@@ -25,6 +25,7 @@ import javafx.stage.FileChooser;
 
 import javax.swing.*;
 import java.io.*;
+import java.sql.Time;
 import java.util.ArrayList;
 
 
@@ -32,9 +33,20 @@ public class Gui extends Application {
 
     private ObservableList<RosterHours> obr;
     private ObservableList<Teacher> obt;
+    private ObservableList<String> obl;
+    private ObservableList<String> obv;
+    private ObservableList<String> obk;
+    private ObservableList<String> obbM;
+    private ObservableList<String> obbH;
+    private ArrayList<String> minutes;
+    private ArrayList<String> hours;
+    private ArrayList<String> vakken;
+    private ArrayList<String> lokalen;
+    private ArrayList<String> klassen;
     private ComboBox comboBoxTeacher;
     private  VBox vBox;
     private  HBox hBox;
+    private  VBox vBoxTime;
     private  VBox vBox0;
     private  Label labelKlas;
     private  Label labelVak;
@@ -44,11 +56,20 @@ public class Gui extends Application {
     private  Label labelLokaal;
     private  VBox vBox1;
     private  TextField textFieldKlas;
+    private ComboBox comboBoxKlas;
     private  TextField textFieldVak;
+    private ComboBox comboBoxVak;
     private  TextField textFieldBegintijd;
+    private ComboBox comboBoxBTijd;
+    private ComboBox comboBoxHoursB;
+    private ComboBox comboboxMinutesB;
+    private ComboBox comboBoxHoursE;
+    private ComboBox comboboxMinutesE;
     private  TextField textFieldEindtijd;
+    private ComboBox comboBoxETijd;
     private  TextField textFieldDocent;
     private  TextField textFieldLokaal;
+    private ComboBox comboBoxLokaal;
     private  VBox vBox2;
     private  Separator separator;
     private HBox hBox0;
@@ -80,13 +101,63 @@ public class Gui extends Application {
     private Label labelteacher;
     @Override
     public void start(Stage stage) {
+        vakken = new ArrayList<>();
+        lokalen = new ArrayList<>();
+        klassen = new ArrayList<>();
+        minutes = new ArrayList<>();
+        hours = new ArrayList<>();
+
         obr = FXCollections.observableList(new ArrayList<RosterHours>());
         obt = FXCollections.observableList(new ArrayList<Teacher>());
+        obbH = FXCollections.observableList(hours);
+        obbM = FXCollections.observableList(minutes);
+        obl = FXCollections.observableList(lokalen);
+        obk = FXCollections.observableList(klassen);
+        obv = FXCollections.observableList(vakken);
+
+        for (int i = 0; i < 24; i++){
+            if (i > 9){
+                hours.add("" + i);
+            }
+            else{
+                hours.add("0" + i );
+            }
+
+        }
+
+        for (int i = 0; i < 60; i++){
+            if (i > 9){
+                minutes.add("" + i);
+            }else{
+                minutes.add("0" + i);
+            }
+
+        }
+
+        vakken.add("OGP");
+        vakken.add("P&OC");
+        vakken.add("2DGraphics");
+        vakken.add("Senior");
+        vakken.add("OOM");
+        lokalen.add("LA001");
+        lokalen.add("LA002");
+        lokalen.add("LA003");
+        lokalen.add("LA004");
+        lokalen.add("LA005");
+        lokalen.add("LA101");
+        lokalen.add("LA102");
+        lokalen.add("LA103");
+        lokalen.add("LA104");
+        klassen.add("A");
+        klassen.add("B");
+        klassen.add("C");
+
         comboBoxTeacher = new ComboBox(obt);
         labelteacher = new Label();
         borderpane = new BorderPane();
         vBox = new VBox();
         hBox = new HBox();
+        vBoxTime = new VBox();
         vBox0 = new VBox();
         labelKlas = new Label();
         labelVak = new Label();
@@ -96,11 +167,20 @@ public class Gui extends Application {
         labelLokaal = new Label();
         vBox1 = new VBox();
         textFieldKlas = new TextField();
+        comboBoxKlas = new ComboBox();
         textFieldVak = new TextField();
+        comboBoxVak = new ComboBox();
         textFieldBegintijd = new TextField();
+        comboBoxBTijd = new ComboBox();
         textFieldEindtijd = new TextField();
+        comboBoxETijd = new ComboBox();
+        comboBoxHoursB = new ComboBox();
+        comboboxMinutesB = new ComboBox();
+        comboboxMinutesE = new ComboBox();
+        comboBoxHoursE = new ComboBox();
         textFieldDocent = new TextField();
         textFieldLokaal = new TextField();
+        comboBoxLokaal = new ComboBox();
         vBox2 = new VBox();
         separator = new Separator();
         hBox0 = new HBox();
@@ -167,6 +247,10 @@ public class Gui extends Application {
         hBox.setPrefHeight(503.0);
         hBox.setPrefWidth(309.0);
 
+        vBoxTime.setPrefHeight(238.0);
+        vBoxTime.setPrefWidth(92.0);
+        vBoxTime.setSpacing(17.0);
+
         vBox0.setPrefHeight(238.0);
         vBox0.setPrefWidth(92.0);
         vBox0.setSpacing(27.0);
@@ -205,17 +289,31 @@ public class Gui extends Application {
         vBox1.setPrefWidth(158.0);
         vBox1.setSpacing(16.0);
 
-        textFieldKlas.setId("textFieldKlas");
-        textFieldKlas.setPrefWidth(200.0);
+//        textFieldKlas.setId("textFieldKlas");
+//        textFieldKlas.setPrefWidth(200.0);
+        comboBoxKlas.setId("comboBox");
+        comboBoxKlas.setPrefWidth(158.0);
+//
+//        textFieldVak.setId("textFieldVak");
+//        textFieldVak.setPrefWidth(200.0);
+        comboBoxVak.setId("comboBox");
+        comboBoxVak.setPrefWidth(158.0);
+//
+//        textFieldBegintijd.setId("textFieldBegintijd");
+//        textFieldBegintijd.setPrefWidth(148.0);
+        comboboxMinutesB.setId("comboBox");
+        comboboxMinutesB.setPrefWidth(70.0);
+//
+//        textFieldEindtijd.setId("textFieldEindtijd");
+//        textFieldEindtijd.setPrefWidth(158.0);
+        comboboxMinutesE.setId("comboBox");
+        comboboxMinutesE.setPrefWidth(70.0);
 
-        textFieldVak.setId("textFieldVak");
-        textFieldVak.setPrefWidth(200.0);
+        comboBoxHoursE.setId("comboBox");
+        comboBoxHoursE.setPrefWidth(70.0);
 
-        textFieldBegintijd.setId("textFieldBegintijd");
-        textFieldBegintijd.setPrefWidth(148.0);
-
-        textFieldEindtijd.setId("textFieldEindtijd");
-        textFieldEindtijd.setPrefWidth(158.0);
+        comboBoxHoursB.setId("comboBox");
+        comboBoxHoursB.setPrefWidth(70.0);
 
         //textFieldDocent.setId("textFieldDocent");
         //textFieldDocent.setPrefWidth(158.0);
@@ -223,8 +321,10 @@ public class Gui extends Application {
         comboBoxTeacher.setId("comboBox");
         comboBoxTeacher.setPrefWidth(158.0);
 
-        textFieldLokaal.setId("textFieldLokaal");
-        textFieldLokaal.setPrefWidth(158.0);
+//        textFieldLokaal.setId("textFieldLokaal");
+//        textFieldLokaal.setPrefWidth(158.0);
+        comboBoxLokaal.setId("comboBox");
+        comboBoxLokaal.setPrefWidth(158.0);
 
         vBox2.setPrefHeight(183.0);
         vBox2.setPrefWidth(471.0);
@@ -336,21 +436,26 @@ public class Gui extends Application {
         HBox.setMargin(buttonHelp, new Insets(0.0, 0.0, 0.0, 190.0));
         borderpane.setRight(vBox3);
 
-        vBox0.getChildren().add(labelKlas);
-        vBox0.getChildren().add(labelVak);
         vBox0.getChildren().add(labelBeginTijd);
         vBox0.getChildren().add(labelEindtijd);
+        vBox0.getChildren().add(labelKlas);
+        vBox0.getChildren().add(labelVak);
         vBox0.getChildren().add(labelDocent);
         vBox0.getChildren().add(labelLokaal);
         hBox.getChildren().add(vBox0);
-        vBox1.getChildren().add(textFieldKlas);
-        vBox1.getChildren().add(textFieldVak);
-        vBox1.getChildren().add(textFieldBegintijd);
-        vBox1.getChildren().add(textFieldEindtijd);
-        //vBox1.getChildren().add(textFieldDocent);
+        vBox1.getChildren().add(comboBoxHoursB);
+        vBox1.getChildren().add(comboBoxHoursE);
+        vBoxTime.getChildren().add(comboboxMinutesB);
+        vBoxTime.getChildren().add(comboboxMinutesE);
+        vBox1.getChildren().add(comboBoxKlas);
+        vBox1.getChildren().add(comboBoxVak);
         vBox1.getChildren().add(comboBoxTeacher);
-        vBox1.getChildren().add(textFieldLokaal);
+        vBox1.getChildren().add(comboBoxLokaal);
+
+
+        //vBox1.getChildren().add(textFieldLokaal);
         hBox.getChildren().add(vBox1);
+        hBox.getChildren().add(vBoxTime);
         vBox.getChildren().add(hBox);
         vBox2.getChildren().add(separator);
         hBox0.getChildren().add(buttonChange);
@@ -372,6 +477,13 @@ public class Gui extends Application {
         standardRoster();
         tableViewRoster.setItems(obr);
         comboBoxTeacher.setItems(obt);
+        comboBoxLokaal.setItems(obl);
+        comboBoxVak.setItems(obv);
+        comboBoxKlas.setItems(obk);
+        comboBoxHoursB.setItems(obbH);
+        comboBoxHoursE.setItems(obbH);
+        comboboxMinutesB.setItems(obbM);
+        comboboxMinutesE.setItems(obbM);
         BorderPane pane = new BorderPane();
 
         pane.setLeft(vBox);
@@ -433,32 +545,35 @@ public class Gui extends Application {
     public void readInputBoxes(){
 
         if (validation() == true){
-            String klas = textFieldKlas.getText();
-            String vak = textFieldVak.getText();
-            String beginTijd = textFieldBegintijd.getText();
-            String eindTijd = textFieldEindtijd.getText();
+
+            String beginTijd = comboBoxHoursB.getValue().toString() + ":" + comboboxMinutesB.getValue().toString();
+            String eindTijd = comboBoxHoursE.getValue().toString() + ":" + comboboxMinutesE.getValue().toString();
+            String klas = comboBoxKlas.getValue().toString();
+            String vak = comboBoxVak.getValue().toString();
             String docent = comboBoxTeacher.getValue().toString();
-            String lokaal = textFieldLokaal.getText();
+            String lokaal = comboBoxLokaal.getValue().toString();
 
             obr.add(new RosterHours(new Subject(vak), new Class(klas), beginTijd, eindTijd, new Teacher(docent),new Classroom(lokaal)));
 
-            textFieldKlas.clear();
-            textFieldVak.clear();
-            textFieldBegintijd.clear();
-            textFieldEindtijd.clear();
-            textFieldDocent.clear();
-            textFieldLokaal.clear();
+            comboBoxKlas.getSelectionModel().clearSelection();
+            comboBoxVak.getSelectionModel().clearSelection();
+            comboBoxBTijd.getSelectionModel().clearSelection();
+            comboBoxETijd.getSelectionModel().clearSelection();
+            comboBoxLokaal.getSelectionModel().clearSelection();
+            comboBoxTeacher.getSelectionModel().clearSelection();
         }
     }
 
     public boolean validation(){
 
-        if (textFieldKlas.getText() == null || textFieldKlas.getText().trim().isEmpty() ||
-                textFieldVak.getText() == null || textFieldVak.getText().trim().isEmpty() ||
-                textFieldBegintijd.getText() == null || textFieldBegintijd.getText().trim().isEmpty() ||
-                textFieldEindtijd.getText() == null || textFieldEindtijd.getText().trim().isEmpty() ||
-                textFieldLokaal.getText() == null || textFieldLokaal.getText().trim().isEmpty() ||
-                comboBoxTeacher.getValue().toString() == null || comboBoxTeacher.getValue().toString().trim().isEmpty()) {
+        if (comboBoxHoursB.getValue().toString() == null || comboBoxHoursB.getValue().toString().trim().isEmpty() ||
+                comboBoxHoursE.getValue().toString() == null || comboBoxHoursE.getValue().toString().trim().isEmpty() ||
+                comboBoxKlas.getValue().toString() == null || comboBoxKlas.getValue().toString().trim().isEmpty() ||
+                comboBoxVak.getValue().toString() == null || comboBoxVak.getValue().toString().trim().isEmpty() ||
+                comboBoxLokaal.getValue().toString() == null || comboBoxLokaal.getValue().toString().trim().isEmpty() ||
+                comboBoxTeacher.getValue().toString() == null || comboBoxTeacher.getValue().toString().trim().isEmpty() ||
+                comboboxMinutesB.getValue().toString() == null || comboboxMinutesB.getValue().toString().trim().isEmpty() ||
+                comboboxMinutesE.getValue().toString() == null || comboboxMinutesE.getValue().toString().trim().isEmpty()) {
             Alert fail= new Alert(Alert.AlertType.WARNING);
             fail.setHeaderText("failure");
             fail.setContentText("One or more fields are empty!");
