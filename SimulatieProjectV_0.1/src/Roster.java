@@ -7,6 +7,9 @@ import java.sql.Date;
 import java.sql.Time;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Scanner;
@@ -68,10 +71,14 @@ public class Roster {
                 String lokaal = ls.next();
                 Classroom classroom = new Classroom(lokaal);
 
-                String beginTijd = ls.next();
-                String eindTijd = ls.next();
+                String beginTijdS = ls.next();
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+                LocalTime beginTijdL = LocalTime.parse(beginTijdS, formatter);
 
-                RosterHours les = new RosterHours(subject, clas, beginTijd, eindTijd, teacher, classroom );
+                String eindTijdS = ls.next();
+                LocalTime eindTijdL = LocalTime.parse(eindTijdS, formatter);
+
+                RosterHours les = new RosterHours(subject, clas, beginTijdL, eindTijdL, teacher, classroom );
                 period.add(les);
                 this.period = period;
                 System.out.println(period.toString());

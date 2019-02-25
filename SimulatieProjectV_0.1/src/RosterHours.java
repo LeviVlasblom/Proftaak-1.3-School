@@ -2,6 +2,9 @@ import javafx.collections.ObservableList;
 
 import java.io.*;
 import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class RosterHours {
@@ -14,12 +17,12 @@ public class RosterHours {
 
     Subject subject;
     Class schoolClass;
-    String startTime;
-    String endTime;
+    LocalTime startTime;
+    LocalTime endTime;
     Teacher teacher;
     Classroom classroom;
 
-    public RosterHours(Subject subject, Class schoolClass, String startTime, String endTime, Teacher teacher, Classroom classroom) {
+    public RosterHours(Subject subject, Class schoolClass, LocalTime startTime, LocalTime endTime, Teacher teacher, Classroom classroom) {
         this.subject = subject;
         this.schoolClass = schoolClass;
         this.startTime = startTime;
@@ -87,19 +90,19 @@ public class RosterHours {
         this.schoolClass = schoolClass;
     }
 
-    public String getStartTime() {
+    public LocalTime getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(String startTime) {
+    public void setStartTime(LocalTime startTime) {
         this.startTime = startTime;
     }
 
-    public String getEndTime() {
+    public LocalTime getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(String endTime) {
+    public void setEndTime(LocalTime endTime) {
         this.endTime = endTime;
     }
 

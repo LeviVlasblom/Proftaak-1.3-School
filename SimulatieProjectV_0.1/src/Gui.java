@@ -26,6 +26,9 @@ import javafx.stage.FileChooser;
 import javax.swing.*;
 import java.io.*;
 import java.sql.Time;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 
@@ -544,36 +547,53 @@ public class Gui extends Application {
 
     public void readInputBoxes(){
 
-        if (validation() == true){
+        if (validation() == true) {
 
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
             String beginTijd = comboBoxHoursB.getValue().toString() + ":" + comboboxMinutesB.getValue().toString();
             String eindTijd = comboBoxHoursE.getValue().toString() + ":" + comboboxMinutesE.getValue().toString();
+
+            LocalTime beginTijdL = LocalTime.parse(beginTijd, formatter);
+            LocalTime eindTijdL = LocalTime.parse(eindTijd, formatter);
+
             String klas = comboBoxKlas.getValue().toString();
             String vak = comboBoxVak.getValue().toString();
             String docent = comboBoxTeacher.getValue().toString();
             String lokaal = comboBoxLokaal.getValue().toString();
 
-            obr.add(new RosterHours(new Subject(vak), new Class(klas), beginTijd, eindTijd, new Teacher(docent),new Classroom(lokaal)));
+            if (validationClass(klas, beginTijdL, eindTijdL) == true) {
+                Alert fail= new Alert(Alert.AlertType.WARNING);
+                fail.setHeaderText("failure");
+                fail.setContentText("Time is already occupied");
+                fail.showAndWait();
+                return;
+            }
 
+            obr.add(new RosterHours(new Subject(vak), new Class(klas), beginTijdL, eindTijdL, new Teacher(docent), new Classroom(lokaal)));
+
+            comboBoxHoursE.getSelectionModel().clearSelection();
+            comboBoxHoursB.getSelectionModel().clearSelection();
+            comboboxMinutesE.getSelectionModel().clearSelection();
+            comboboxMinutesB.getSelectionModel().clearSelection();
             comboBoxKlas.getSelectionModel().clearSelection();
             comboBoxVak.getSelectionModel().clearSelection();
             comboBoxBTijd.getSelectionModel().clearSelection();
             comboBoxETijd.getSelectionModel().clearSelection();
             comboBoxLokaal.getSelectionModel().clearSelection();
             comboBoxTeacher.getSelectionModel().clearSelection();
+
         }
     }
 
     public boolean validation(){
-
-        if (comboBoxHoursB.getValue().toString() == null || comboBoxHoursB.getValue().toString().trim().isEmpty() ||
-                comboBoxHoursE.getValue().toString() == null || comboBoxHoursE.getValue().toString().trim().isEmpty() ||
-                comboBoxKlas.getValue().toString() == null || comboBoxKlas.getValue().toString().trim().isEmpty() ||
-                comboBoxVak.getValue().toString() == null || comboBoxVak.getValue().toString().trim().isEmpty() ||
-                comboBoxLokaal.getValue().toString() == null || comboBoxLokaal.getValue().toString().trim().isEmpty() ||
-                comboBoxTeacher.getValue().toString() == null || comboBoxTeacher.getValue().toString().trim().isEmpty() ||
-                comboboxMinutesB.getValue().toString() == null || comboboxMinutesB.getValue().toString().trim().isEmpty() ||
-                comboboxMinutesE.getValue().toString() == null || comboboxMinutesE.getValue().toString().trim().isEmpty()) {
+        if (comboBoxHoursB.getSelectionModel().isEmpty() ||
+                comboBoxHoursE.getSelectionModel().isEmpty()||
+                comboBoxKlas.getSelectionModel().isEmpty() ||
+                comboBoxVak.getSelectionModel().isEmpty()||
+                comboBoxLokaal.getSelectionModel().isEmpty()||
+                comboBoxTeacher.getSelectionModel().isEmpty() ||
+                comboboxMinutesB.getSelectionModel().isEmpty() ||
+                comboboxMinutesE.getSelectionModel().isEmpty()) {
             Alert fail= new Alert(Alert.AlertType.WARNING);
             fail.setHeaderText("failure");
             fail.setContentText("One or more fields are empty!");
@@ -582,6 +602,19 @@ public class Gui extends Application {
             return false ;
         }
         return true;
+    }
+
+    public boolean validationClass(String schoolClass, LocalTime startTime, LocalTime endTime){
+        for (RosterHours listRoster :obr) {
+            if (listRoster.getSchoolClass().getName().equals(schoolClass)) {
+                if (listRoster.getStartTime().isAfter(startTime) && listRoster.getStartTime().isBefore(endTime)||
+                        listRoster.getEndTime().isAfter(startTime) && listRoster.getEndTime().isBefore(endTime)||
+                        listRoster.getEndTime().isAfter(endTime) && listRoster.getStartTime().isBefore(startTime)){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     public void FilerName(){
