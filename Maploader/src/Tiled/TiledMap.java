@@ -1,7 +1,9 @@
 package Tiled;
 
+
 import javax.imageio.ImageIO;
 import javax.json.Json;
+import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
 import java.awt.*;
@@ -9,7 +11,6 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 
 
@@ -23,8 +24,7 @@ public class TiledMap {
     private TiledTile tile;
     private TiledTileMap tilemap;
 
-    /*OLD CODE FOR LOADING IN ENTIRE FILE AT ONCE. WITHOUT LAYERS*/
-/*
+
     public TiledMap(String fileName){
         JsonReader reader = null;
         try {
@@ -33,6 +33,10 @@ public class TiledMap {
             System.out.print(e.getMessage());
         }
         JsonObject root = reader.readObject();
+        JsonArray layers = root.getJsonArray("layers");
+        for (int i = 0; i < layers.size(); i++) {
+            this.layers.add(new TiledLayer(layers.getJsonObject(i)));
+        }
         this.tile = new TiledTile(fileName);
         this.tilemap = new TiledTileMap(fileName);
         //load the tilemap
@@ -84,5 +88,5 @@ public class TiledMap {
         }
 
 }
-/*
+
 
