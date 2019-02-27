@@ -12,17 +12,19 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 
-/*TODO NEEDS TO BE UPDATED TO NEW CONSTURCTORS AND TILESET METHODS
+
 
 
 public class TiledMap {
 
     private ArrayList<BufferedImage> tiles = new ArrayList<>();
     private int[][] map;
-    private int layers;
+    private ArrayList<TiledLayer> layers;
     private TiledTile tile;
     private TiledTileMap tilemap;
 
+    /*OLD CODE FOR LOADING IN ENTIRE FILE AT ONCE. WITHOUT LAYERS*/
+/*
     public TiledMap(String fileName){
         JsonReader reader = null;
         try {
@@ -82,4 +84,5 @@ public class TiledMap {
         }
 
 }
-*/
+/*
+
