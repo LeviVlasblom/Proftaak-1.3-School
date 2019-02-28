@@ -13,9 +13,6 @@ public class TiledTile {
 
     private int tileHeight;
     private int tileWidth;
-    private String name;
-    private BufferedImage image;
-
 
     public TiledTile(String fileName) {
 
@@ -27,9 +24,7 @@ public class TiledTile {
         }
         JsonObject root = reader.readObject();
         try {
-            String tilesheet = root.getJsonObject("tilemap").getString("file");
-            this.image = ImageIO.read(new FileInputStream("Resources\\" + tilesheet));
-            this.name = root.getJsonObject("tilesets").getString("name");
+
             this.tileHeight = root.getJsonObject("tilesets").getInt("tileheight");
             this.tileWidth = root.getJsonObject("tilesets").getInt("tilewidth");
 

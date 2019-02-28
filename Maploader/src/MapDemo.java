@@ -1,4 +1,4 @@
-/*import Tiled.TiledMap;
+import Tiled.TiledMap;
 import Tiled.TiledTileMap;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
@@ -11,7 +11,7 @@ import java.awt.*;
 
 
 
- TODO WORKS BUT STILL NEEDS UPDATES FROM NEW CONSTRUCTORS
+
 
 
 
@@ -79,4 +79,3 @@ public class MapDemo extends Application {
     }
 
 }
-*/

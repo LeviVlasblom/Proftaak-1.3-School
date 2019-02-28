@@ -21,6 +21,7 @@ public class TiledMap {
     private ArrayList<BufferedImage> tiles = new ArrayList<>();
     private int[][] map;
     private ArrayList<TiledLayer> layers;
+    private TiledTileSet tileset;
     private TiledTile tile;
     private TiledTileMap tilemap;
 
@@ -35,32 +36,35 @@ public class TiledMap {
         JsonObject root = reader.readObject();
         JsonArray layers = root.getJsonArray("layers");
         for (int i = 0; i < layers.size(); i++) {
-            this.layers.add(new TiledLayer(layers.getJsonObject(i)));
+            try {
+                this.layers.add(new TiledLayer(layers.getJsonObject(i)));
+            }catch(Exception e){
+                e.printStackTrace();
+            }
         }
         this.tile = new TiledTile(fileName);
         this.tilemap = new TiledTileMap(fileName);
-        //load the tilemap
+        this.tileset = new TiledTileSet(fileName);
+        //load the tilemap TODO ADD WAY TO READ ALL DATA AND DISPLAY MAP
         try {
-            String tilesheet = root.getJsonObject("tilemap").getString("file");
-            BufferedImage tilemap = ImageIO.read(new FileInputStream("Resources\\" + tilesheet));
             for(int y = 0; y < tilemap.getHeight(); y += tile.getTileHeight())
             {
                 for(int x = 0; x < tilemap.getWidth(); x += tile.getTileWidth())
                 {
-                    tiles.add(tilemap.getSubimage(x, y, tile.getTileWidth(), tile.getTileHeight()));
+                    tiles.add(tileset.getImage().getSubimage(x, y, tile.getTileWidth(), tile.getTileHeight()));
                 }
             }
-        } catch (IOException e) {
+        } catch (NullPointerException e) {
             e.printStackTrace();
         }
 
         map = new int[tilemap.getHeight()][tilemap.getWidth()];
-        for(int y = 0; y < tilemap.getHeight(); y++)
-        {
-            for(int x = 0; x < tilemap.getWidth(); x++)
-            {
-                map[y][x] = root.getJsonArray("map").getJsonArray(y).getInt(x);
+        for (int i = 0; i < layers.size(); i++){
+        for(int y = 0; y < tilemap.getHeight(); y++) {
+            for (int x = 0; x < tilemap.getWidth(); x++) {
+                map[y][x] = this.layers.get(i).getData(y).getInt(x);
             }
+        }
         }
     }
 

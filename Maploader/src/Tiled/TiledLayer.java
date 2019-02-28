@@ -17,33 +17,24 @@ public class TiledLayer {
 
 
     public TiledLayer(JsonObject object) {
-        object.getInt("height");
-        object.getInt("width");
-        JsonReader reader = null;
-        try {
-            reader = Json.createReader(new FileInputStream("resources//"));
-
-        }catch(Exception e){
-            System.out.print(e.getMessage());
-        }
+        this.height = object.getInt("height");
+        this.width = object.getInt("width");
+        this.ID = object.getInt("id");
         //JsonObject root = reader.readObject();
         try{
             //this.ID = root.getJsonObject("layers").getInt("ID");
             //this.name = root.getJsonObject("layers").getString("name");
-            //JsonArray nums = root.getJsonObject("layers").getJsonArray("data");
+            JsonArray nums = object.getJsonArray("data");
             //this.width = root.getJsonObject("layers").getInt("width");
             //this.height = root.getJsonObject("layers").getInt("height");
-            //ArrayList<Integer> data = new ArrayList<>();
-            //if (nums != null ) {
-            //    for (int i=0;i<nums.size();i++){
-            //        data.add(nums.getInt(i));
-            //    }
-            //}
-            //this.data = data;
-            JsonArray tileData = object.getJsonArray("data");
-            for (int i = 0; i < tileData.size(); i++) {
-                data.add(tileData.getInt(i));
+            ArrayList<Integer> data = new ArrayList<>();
+            if (nums != null ) {
+                for (int i=0;i<nums.size();i++){
+                    data.add(nums.getInt(i));
+                }
             }
+            this.data = data;
+
 
         }catch(Exception e){
             System.out.println(e.getMessage());
@@ -67,4 +58,15 @@ public class TiledLayer {
         this.height = height;
     }
 
+    public int getID() {
+        return ID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public ArrayList<Integer> getData() {
+        return data;
+    }
 }
