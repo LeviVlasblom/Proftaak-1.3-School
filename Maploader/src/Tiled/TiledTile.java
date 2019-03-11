@@ -25,8 +25,8 @@ public class TiledTile {
         JsonObject root = reader.readObject();
         try {
 
-            this.tileHeight = root.getJsonObject("tilesets").getInt("tileheight");
-            this.tileWidth = root.getJsonObject("tilesets").getInt("tilewidth");
+            this.tileHeight = root.getInt("tileheight");
+            this.tileWidth = root.getInt("tilewidth");
 
         }catch(Exception e){
             System.out.println(e.getMessage());

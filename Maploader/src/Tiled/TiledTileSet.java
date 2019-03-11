@@ -2,6 +2,7 @@ package Tiled;
 
 import javax.imageio.ImageIO;
 import javax.json.Json;
+import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
 import java.awt.image.BufferedImage;
@@ -12,18 +13,10 @@ public class TiledTileSet {
     private BufferedImage image;
 
 
-    public TiledTileSet(String fileName) {
-        JsonReader reader = null;
+    public TiledTileSet(JsonObject object) {
         try {
-            reader = Json.createReader(new FileInputStream("Resources//" + fileName));
-        } catch (Exception e) {
-            System.out.print(e.getMessage());
-        }
-        JsonObject root = reader.readObject();
-        try {
-            String tilesheet = root.getJsonObject("tilemap").getString("file");
-            this.image = ImageIO.read(new FileInputStream("Resources\\" + tilesheet));
-            this.name = root.getJsonObject("tilesets").getString("name");
+            this.image = ImageIO.read(new FileInputStream("Resources\\" + object.getString("image")));
+            this.name = object.getString("name");
         } catch(Exception e){
         System.out.println(e.getMessage());
       }

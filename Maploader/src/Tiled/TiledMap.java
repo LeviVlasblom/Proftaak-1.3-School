@@ -11,6 +11,7 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.Buffer;
 import java.util.ArrayList;
 
 
@@ -18,10 +19,10 @@ import java.util.ArrayList;
 
 public class TiledMap {
 
-    private ArrayList<BufferedImage> tiles = new ArrayList<>();
+    private ArrayList<BufferedImage> tiles;
     private int[][] map;
     private ArrayList<TiledLayer> layers;
-    private TiledTileSet tileset;
+    private ArrayList<TiledTileSet> tilesets;
     private TiledTile tile;
     private TiledTileMap tilemap;
 
@@ -33,25 +34,35 @@ public class TiledMap {
         }catch(Exception e){
             System.out.print(e.getMessage());
         }
+        layers = new ArrayList<>();
+        tiles = new ArrayList<>();
+        tilesets = new ArrayList<>();
         JsonObject root = reader.readObject();
-        JsonArray layers = root.getJsonArray("layers");
-        for (int i = 0; i < layers.size(); i++) {
+        JsonArray curLayers = root.getJsonArray("layers");
+        for (int i = 0; i < curLayers.size(); i++) {
             try {
-                this.layers.add(new TiledLayer(layers.getJsonObject(i)));
+                this.layers.add(new TiledLayer(curLayers.getJsonObject(i)));
             }catch(Exception e){
                 e.printStackTrace();
             }
         }
-        this.tile = new TiledTile(fileName);
+        JsonArray tilesets = root.getJsonArray("layers");
+        for (int i = 0; i < tilesets.size(); i++){
+            try{
+                this.tilesets.add(new TiledTileSet(tilesets.getJsonObject(i)));
+            }
+        }
+        tile = new TiledTile(fileName);
         this.tilemap = new TiledTileMap(fileName);
-        this.tileset = new TiledTileSet(fileName);
         //load the tilemap TODO ADD WAY TO READ ALL DATA AND DISPLAY MAP
         try {
             for(int y = 0; y < tilemap.getHeight(); y += tile.getTileHeight())
             {
                 for(int x = 0; x < tilemap.getWidth(); x += tile.getTileWidth())
                 {
-                    tiles.add(tileset.getImage().getSubimage(x, y, tile.getTileWidth(), tile.getTileHeight()));
+                    BufferedImage aapos = tileset.getImage();
+                    BufferedImage aap = tileset.getImage().getSubimage(x, y, tile.getTileWidth(), tile.getTileHeight());
+                    tiles.add(aap);
                 }
             }
         } catch (NullPointerException e) {
@@ -62,7 +73,7 @@ public class TiledMap {
         for (int i = 0; i < layers.size(); i++){
         for(int y = 0; y < tilemap.getHeight(); y++) {
             for (int x = 0; x < tilemap.getWidth(); x++) {
-                map[y][x] = this.layers.get(i).getData(y).getInt(x);
+//                map[y][x] = this.layers.get(i).getData(y).getInt(x);
             }
         }
         }

@@ -35,7 +35,7 @@
         {
          "columns":12,
          "firstgid":1,
-         "image":"Tiles\/dirt-tiles.png",
+         "image":"dirt-tiles.png",
          "imageheight":256,
          "imagewidth":384,
          "margin":0,
@@ -43,7 +43,7 @@
          "spacing":0,
          "tilecount":96,
          "tileheight":32,
-         "tilewidth":32
+          "tilewidth":32
         }],
  "tilewidth":32,
  "type":"map",

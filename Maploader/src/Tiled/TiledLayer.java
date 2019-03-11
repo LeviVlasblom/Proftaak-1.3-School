@@ -20,6 +20,7 @@ public class TiledLayer {
         this.height = object.getInt("height");
         this.width = object.getInt("width");
         this.ID = object.getInt("id");
+        this.name = object.getString("name");
         //JsonObject root = reader.readObject();
         try{
             //this.ID = root.getJsonObject("layers").getInt("ID");
