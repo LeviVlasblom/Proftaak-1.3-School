@@ -10,7 +10,7 @@ public class TiledLayer {
 
     private int ID;
     private String name;
-    private ArrayList<Integer> data;
+    private int[][] data;
     private int width;
     private int height;
 
@@ -28,10 +28,12 @@ public class TiledLayer {
             JsonArray nums = object.getJsonArray("data");
             //this.width = root.getJsonObject("layers").getInt("width");
             //this.height = root.getJsonObject("layers").getInt("height");
-            ArrayList<Integer> data = new ArrayList<>();
+            int[][] data = new int[0][0];
             if (nums != null ) {
                 for (int i=0;i<nums.size();i++){
-                    data.add(nums.getInt(i));
+                    for (int j = 0; j < ; j++) {
+                        data[j][i] = nums.getInt(i);
+                    }
                 }
             }
             this.data = data;

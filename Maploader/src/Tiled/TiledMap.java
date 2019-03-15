@@ -46,23 +46,33 @@ public class TiledMap {
                 e.printStackTrace();
             }
         }
-        JsonArray tilesets = root.getJsonArray("layers");
+        JsonArray tilesets = root.getJsonArray("tilesets");
+        ArrayList<Integer> limits = new ArrayList<>();
         for (int i = 0; i < tilesets.size(); i++){
             try{
                 this.tilesets.add(new TiledTileSet(tilesets.getJsonObject(i)));
+                limits.add((new TiledTileSet(tilesets.getJsonObject(i)).getFirstgid()));
+            } catch (Exception e){
+                System.out.println(e.getMessage());
             }
         }
         tile = new TiledTile(fileName);
         this.tilemap = new TiledTileMap(fileName);
         //load the tilemap TODO ADD WAY TO READ ALL DATA AND DISPLAY MAP
+
         try {
-            for(int y = 0; y < tilemap.getHeight(); y += tile.getTileHeight())
-            {
-                for(int x = 0; x < tilemap.getWidth(); x += tile.getTileWidth())
-                {
-                    BufferedImage aapos = tileset.getImage();
-                    BufferedImage aap = tileset.getImage().getSubimage(x, y, tile.getTileWidth(), tile.getTileHeight());
-                    tiles.add(aap);
+            for (int i = 0; i < layers.size(); i++) {
+                int correcttileset = 0;
+                for (int y = 0; y < tilemap.getHeight(); y += tile.getTileHeight()) {
+                    for (int x = 0; x < tilemap.getWidth(); x += tile.getTileWidth()) {
+                        for (int n = 0; n < limits.size(); n++) {
+                            if (layers.get(i).getData()[y][x] <= limits.get(n)){
+                                correcttileset = n;
+                            }
+                            tiles.add(this.tilesets.get(correcttileset).getImage().getSubimage(x, y, tile.getTileWidth(), tile.getTileHeight()));
+                        }
+
+                    }
                 }
             }
         } catch (NullPointerException e) {
@@ -70,12 +80,15 @@ public class TiledMap {
         }
 
         map = new int[tilemap.getHeight()][tilemap.getWidth()];
-        for (int i = 0; i < layers.size(); i++){
-        for(int y = 0; y < tilemap.getHeight(); y++) {
-            for (int x = 0; x < tilemap.getWidth(); x++) {
-//                map[y][x] = this.layers.get(i).getData(y).getInt(x);
+
+        System.out.println(tilemap.getWidth());
+
+        for (TiledLayer layer : this.layers) {
+            for(int y = 0; y < tilemap.getHeight(); y++) {
+                for (int x = 0; x < tilemap.getWidth(); x++) {
+                    map = layer.getData();
+                }
             }
-        }
         }
     }
 
