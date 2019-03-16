@@ -15,6 +15,7 @@ public class Map {
     private int tileHeight;
     private int tileWidth;
     private ArrayList<Layer> layers;
+    private ArrayList<TileSet> tilesets;
     private int[][] map;
     private ArrayList<BufferedImage> tiles;
 
@@ -35,14 +36,38 @@ public class Map {
         JsonArray rawLayers = root.getJsonArray("layers");
         for (int i = 0; i < rawLayers.size(); i++)  {
             try {
-                this.layers.add(new Layer(rawLayers.getJsonObject(i), fileName));
+                this.layers.add(new Layer(rawLayers.getJsonObject(i)));
             }catch(Exception e){
                 e.printStackTrace();
             }
         }
 
-        //load the tilemap
+        JsonArray tilesets = root.getJsonArray("tilesets");
+        ArrayList<Integer> limits = new ArrayList<>();
+        for (int i = 0; i < tilesets.size(); i++){
+            try{
+                this.tilesets.add(new TileSet(tilesets.getJsonObject(i)));
+                limits.add((new TileSet(tilesets.getJsonObject(i)).getFirstgid()));
+            } catch (Exception e){
+                System.out.println(e.getMessage());
+            }
+        }
 
+        try {
+            for (int i = 0; i < layers.size(); i++) {
+                int correcttileset = 0;
+
+                        for (int n = 0; n < limits.size(); n++) {
+                            if (layers.get(i).getTileIDs() <= limits.get(n)){
+                                correcttileset = n;
+                            }
+                            tiles.add(this.tilesets.get(correcttileset).getImage().getSubimage(x, y, tile.getTileWidth(), tile.getTileHeight()));
+                        }
+                        
+            }
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
 
         map = new int[height][width];
         for(int y = 0; y < height; y++)

@@ -5,24 +5,18 @@ import javax.json.JsonObject;
 import java.util.ArrayList;
 
 public class Layer {
-    private ArrayList<Tile> tiles;
+    public JsonArray getTileIDs() {
+        return tileIDs;
+    }
+
+    private JsonArray tileIDs;
     private int id;
     private String name;
 
-    public Layer(JsonObject object, String fileName) {
+    public Layer(JsonObject object) {
         this.id = object.getInt("id");
         this.name = object.getString("name");
-        this.tiles = new ArrayList<>();
-        try {
-            JsonArray nums = object.getJsonArray("data");
-            if (nums != null) {
-                for (int i = 0; i < nums.size()-1; i++) {
-                    this.tiles.add(new Tile(fileName, Long.parseLong(nums.get(i).toString())));
-                }
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        this.tileIDs = object.getJsonArray("data");
     }
 }
 
