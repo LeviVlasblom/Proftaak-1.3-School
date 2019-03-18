@@ -51,8 +51,7 @@ public class MapDemo extends Application {
 
     public void init()
     {
-        map = new TiledMap("school_1tmx..json");
-
+        map = new TiledMap("school_1_collision_tmx.json");
     }
 
 

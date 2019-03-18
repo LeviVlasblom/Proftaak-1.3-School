@@ -13,6 +13,7 @@ public class TiledTile {
 
     private int tileHeight;
     private int tileWidth;
+    private int ID;
 
     public TiledTile(String fileName) {
 
@@ -24,7 +25,6 @@ public class TiledTile {
         }
         JsonObject root = reader.readObject();
         try {
-
             this.tileHeight = root.getInt("tileheight");
             this.tileWidth = root.getInt("tilewidth");
 
@@ -39,5 +39,13 @@ public class TiledTile {
 
     public int getTileWidth() {
         return tileWidth;
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
     }
 }
