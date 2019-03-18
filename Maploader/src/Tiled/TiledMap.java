@@ -18,6 +18,9 @@ import java.util.Optional;
 
 
 public class TiledMap {
+    private static final int FLIP_H_FLAG = 0x80000000;
+    private static final int FLIP_V_FLAG = 0x40000000;
+    private static final int FLIP_D_FLAG = 0x20000000;
 
     ArrayList<BufferedImage> tilesImages;
     private int[][] map;
@@ -69,12 +72,20 @@ public class TiledMap {
             for (int y = 0; y < layer.getHeight(); y++) {
                 for (int x = 0; x < layer.getWidth(); x++) {
                     int currentData = layer.getData().get(ii);
-                    Optional<TiledTileSet> tileSet = this.tilesets.stream().filter(f -> f.getFirstgid() <= currentData && (f.getFirstgid() + f.getTileCount()) >= currentData).findFirst();
+                    boolean hflip = (currentData & FLIP_H_FLAG) > 0;
+                    boolean vflip = (currentData & FLIP_V_FLAG) > 0;
+                    boolean dflip = (currentData & FLIP_D_FLAG) > 0;
+
+                    int d = currentData &= ~(FLIP_H_FLAG|FLIP_V_FLAG|FLIP_D_FLAG);
+                    int tileFlags = ( (hflip?FLIP_H_FLAG:0) | (vflip?FLIP_V_FLAG:0) | (dflip?FLIP_D_FLAG:0) ) - d;
+
+                    Optional<TiledTileSet> tileSet = this.tilesets.stream().filter(f -> f.getFirstgid() <= d && (f.getFirstgid() + f.getTileCount()) >= d).findFirst();
                     if (tileSet.isPresent()) {
                         BufferedImage tileSheetImage = tileSet.get().getImage();
-                        int index = currentData - tileSet.get().getFirstgid();
+                        int index = currentData;
+                        index -= tileSet.get().getFirstgid();
                         BufferedImage image = tileSheetImage.getSubimage(32 * (index % tileSet.get().getColumns()), 32 * (index / tileSet.get().getColumns()), 32, 32);
-                        layeredTiles.add(new Tile(new Point2D.Double(x * 32, y * 32), image));
+                        layeredTiles.add(new Tile(new Point2D.Double(x * 32, y * 32), image, tileFlags));
                     }
                     ii++;
                 }
