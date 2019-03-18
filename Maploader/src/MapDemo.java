@@ -56,7 +56,7 @@ public class MapDemo extends Application {
 
 
 
-    public void draw(Graphics2D g)
+    public void draw(FXGraphics2D g)
     {
         g.setBackground(Color.black);
         g.clearRect(0,0,(int)canvas.getWidth(), (int)canvas.getHeight());

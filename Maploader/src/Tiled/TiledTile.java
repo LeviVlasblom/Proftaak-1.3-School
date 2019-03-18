@@ -19,7 +19,7 @@ public class TiledTile {
 
         JsonReader reader = null;
         try {
-            reader = Json.createReader(new FileInputStream("Resources//" +fileName));
+            reader = Json.createReader(new FileInputStream("Resources\\" +fileName));
         }catch(Exception e){
             System.out.print(e.getMessage());
         }

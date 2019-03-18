@@ -1,20 +1,20 @@
 package Tiled;
 
 
-import javax.imageio.ImageIO;
+import org.jfree.fx.FXGraphics2D;
+
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
+import javax.swing.text.html.Option;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
+import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
-import java.io.IOException;
-import java.nio.Buffer;
 import java.util.ArrayList;
-
-
+import java.util.Optional;
 
 
 public class TiledMap {
@@ -23,6 +23,7 @@ public class TiledMap {
     private int[][] map;
     private ArrayList<TiledLayer> layers;
     private ArrayList<TiledTileSet> tilesets;
+    private ArrayList<ArrayList<Tile>> tilesByLayer;
     private TiledTile tile;
     private TiledTileMap tilemap;
 
@@ -30,7 +31,7 @@ public class TiledMap {
     public TiledMap(String fileName){
         JsonReader reader = null;
         try {
-            reader = Json.createReader(new FileInputStream("resources//" +fileName));
+            reader = Json.createReader(new FileInputStream("resources\\" +fileName));
         }catch(Exception e){
             System.out.print(e.getMessage());
         }
@@ -60,57 +61,83 @@ public class TiledMap {
         this.tilemap = new TiledTileMap(fileName);
         //load the tilemap TODO ADD WAY TO READ ALL DATA AND DISPLAY MAP
 
-        try {
-            for (int i = 0; i < layers.size(); i++) {
-                int correcttileset = 0;
-                for (int y = 0; y < tilemap.getHeight(); y += tile.getTileHeight()) {
-                    for (int x = 0; x < tilemap.getWidth(); x += tile.getTileWidth()) {
-                        for (int n = 0; n < limits.size(); n++) {
-                            if (layers.get(i).getData().get(y) > limits.get(n)) {
-                                correcttileset = n;
-                            }
-                        }
-                        BufferedImage bf = this.tilesets.get(correcttileset).getImage();
-                        BufferedImage subimage = bf.getSubimage(x, y, tile.getTileWidth() ,tile.getTileHeight());
-                        tilesImages.add(subimage);
-                     //   tilesImages.add(this.tilesets.get(correcttileset).getImage().getSubimage(x, y, tile.getTileWidth(), tile.getTileHeight()));
-
+        tilesByLayer = new ArrayList<>();
+        for (int i = 0; i < layers.size(); i++) {
+            TiledLayer layer = layers.get(i);
+            ArrayList<Tile> layeredTiles = new ArrayList<>();
+            int ii = 0;
+            for (int y = 0; y < layer.getHeight(); y++) {
+                for (int x = 0; x < layer.getWidth(); x++) {
+                    int currentData = layer.getData().get(ii);
+                    Optional<TiledTileSet> tileSet = this.tilesets.stream().filter(f -> f.getFirstgid() <= currentData && (f.getFirstgid() + f.getTileCount()) >= currentData).findFirst();
+                    if (tileSet.isPresent()) {
+                        BufferedImage tileSheetImage = tileSet.get().getImage();
+                        int index = currentData - tileSet.get().getFirstgid();
+                        BufferedImage image = tileSheetImage.getSubimage(32 * (index % tileSet.get().getColumns()), 32 * (index / tileSet.get().getColumns()), 32, 32);
+                        layeredTiles.add(new Tile(new Point2D.Double(x * 32, y * 32), image));
                     }
+                    ii++;
                 }
             }
-        } catch (NullPointerException e) {
-            e.printStackTrace();
+            this.tilesByLayer.add(layeredTiles);
         }
 
-        map = new int[tilemap.getHeight()][tilemap.getWidth()];
-        for (TiledLayer layer : this.layers) {
-            for(int y = 0; y < tilemap.getHeight(); y++) {
-                for (int x = 0; x < tilemap.getWidth(); x++) {
-                this.map[y][x] = layer.getData().get(x);
-                }
-            }
-        }
+//        try {
+//            for (int i = 0; i < layers.size(); i++) {
+//                int correcttileset = 0;
+//                for (int y = 0; y < tilemap.getHeight(); y += tile.getTileHeight()) {
+//                    for (int x = 0; x < tilemap.getWidth(); x += tile.getTileWidth()) {
+//                        for (int n = 0; n < limits.size(); n++) {
+//                            if (layers.get(i).getData().get(y) > limits.get(n)) {
+//                                correcttileset = n;
+//                            }
+//                        }
+//                        BufferedImage bf = this.tilesets.get(correcttileset).getImage();
+//                        BufferedImage subimage = bf.getSubimage(x, y, tile.getTileWidth() ,tile.getTileHeight());
+//                        tilesImages.add(subimage);
+//                     //   tilesImages.add(this.tilesets.get(correcttileset).getImage().getSubimage(x, y, tile.getTileWidth(), tile.getTileHeight()));
+//
+//                    }
+//                }
+//            }
+//        } catch (NullPointerException e) {
+//            e.printStackTrace();
+//        }
+//
+//        map = new int[tilemap.getHeight()][tilemap.getWidth()];
+//        for (TiledLayer layer : this.layers) {
+//            for(int y = 0; y < tilemap.getHeight(); y++) {
+//                for (int x = 0; x < tilemap.getWidth(); x++) {
+//                this.map[y][x] = layer.getData().get(x);
+//                }
+//            }
+//        }
     }
 
 
 
 
-        public void draw(Graphics2D g2d)
+        public void draw(FXGraphics2D g)
         {
-
-            for(int y = 0; y < tilemap.getHeight(); y++)
-            {
-                for(int x = 0; x < tilemap.getWidth(); x++)
-                {
-                    if(this.map[y][x] < 0)
-                        continue;
-
-                    g2d.drawImage(
-                            tilesImages.get(this.map[y][x]),
-                            AffineTransform.getTranslateInstance(x*tile.getTileWidth(), y*tile.getTileHeight()),
-                            null);
+            for (int i = 0; i < tilesByLayer.size(); i++) {
+                ArrayList<Tile> sublist = tilesByLayer.get(i);
+                for (int j = 0; j < sublist.size(); j++) {
+                    sublist.get(j).draw(g);
                 }
             }
+
+//            for(int y = 0; y < tilemap.getHeight(); y++)
+//            {
+//                for(int x = 0; x < tilemap.getWidth(); x++)
+//                {
+//                    if(this.map[y][x] < 0)
+//                        continue;
+//
+//                    g2d.drawImage(
+//                            tilesImages.get(this.map[y][x]),
+//                            AffineTransform.getTranslateInstance(x*tile.getTileWidth(), y*tile.getTileHeight()), null);
+//                }
+//            }
 
 
         }
