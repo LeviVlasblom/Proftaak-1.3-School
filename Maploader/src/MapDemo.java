@@ -8,12 +8,7 @@ import javafx.stage.Stage;
 import org.jfree.fx.FXGraphics2D;
 import org.jfree.fx.ResizableCanvas;
 import java.awt.*;
-
-
-
-
-
-
+import java.util.ArrayList;
 
 
 public class MapDemo extends Application {
@@ -21,11 +16,14 @@ public class MapDemo extends Application {
 
     private TiledMap map;
     private ResizableCanvas canvas;
+    private ArrayList<Person> students;
 
     @Override
     public void start(Stage stage) throws Exception {
         BorderPane mainPane = new BorderPane();
         canvas = new ResizableCanvas(g -> draw(g), mainPane);
+        canvas.setWidth(1375);
+        canvas.setHeight(1080);
         mainPane.setCenter(canvas);
         FXGraphics2D g2d = new FXGraphics2D(canvas.getGraphicsContext2D());
         new AnimationTimer() {
@@ -51,7 +49,10 @@ public class MapDemo extends Application {
 
     public void init()
     {
-        map = new TiledMap("school_1_collision_tmx.json");
+
+        map = new TiledMap("school2_met_collision.json");
+        students = new ArrayList<>();
+
     }
 
 

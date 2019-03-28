@@ -27,8 +27,8 @@ public class TiledMap {
     private ArrayList<TiledLayer> layers;
     private ArrayList<TiledTileSet> tilesets;
     private ArrayList<ArrayList<Tile>> tilesByLayer;
-    private TiledTile tile;
-    private TiledTileMap tilemap;
+//    private TiledTile tile;
+//    private TiledTileMap tilemap;
 
 
     public TiledMap(String fileName){
@@ -60,9 +60,9 @@ public class TiledMap {
                 System.out.println(e.getMessage());
             }
         }
-        tile = new TiledTile(fileName);
-        this.tilemap = new TiledTileMap(fileName);
-        //load the tilemap TODO ADD WAY TO READ ALL DATA AND DISPLAY MAP
+//        tile = new TiledTile(fileName);
+//        this.tilemap = new TiledTileMap(fileName);
+        //load the tilemap
 
         tilesByLayer = new ArrayList<>();
         for (int i = 0; i < layers.size(); i++) {
@@ -84,8 +84,18 @@ public class TiledMap {
                         BufferedImage tileSheetImage = tileSet.get().getImage();
                         int index = currentData;
                         index -= tileSet.get().getFirstgid();
-                        BufferedImage image = tileSheetImage.getSubimage(32 * (index % tileSet.get().getColumns()), 32 * (index / tileSet.get().getColumns()), 32, 32);
-                        layeredTiles.add(new Tile(new Point2D.Double(x * 32, y * 32), image, tileFlags));
+                        if (layers.get(i).getName().equals("collision")) {
+                            switch (index){
+                                case 1871: layeredTiles.add(new Tile(new Point2D.Double(x*16, y*16), false));
+                                break;
+                                default: layeredTiles.add(new Tile(new Point2D.Double(x*16, y*16), true));
+                            }
+
+
+                        } else {
+                            BufferedImage image = tileSheetImage.getSubimage(16 * (index % tileSet.get().getColumns()), 16 * (index / tileSet.get().getColumns()), 16, 16);
+                            layeredTiles.add(new Tile(new Point2D.Double(x * 16, y * 16), image, tileFlags));
+                        }
                     }
                     ii++;
                 }
