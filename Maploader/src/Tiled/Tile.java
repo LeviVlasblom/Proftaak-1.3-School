@@ -12,17 +12,20 @@ public class Tile {
     private BufferedImage image;
     private int flags = 0;
     private boolean collision;
+    private boolean destination;
 
     public Tile(Point2D location, BufferedImage image, int flags) {
         this.location = location;
         this.image = image;
         this.flags = flags;
         this.collision = false;
+        this.destination = false;
     }
 
-    public Tile(Point2D location, boolean collision) {
+    public Tile(Point2D location, boolean collision, boolean destination) {
         this.location = location;
         this.collision = collision;
+        this.destination = destination;
     }
 
     public void draw(FXGraphics2D g) {
@@ -31,6 +34,13 @@ public class Tile {
         g.drawImage(image, transform, null);
     }
 
+    public boolean isCollision() {
+        return collision;
+    }
+
+    public boolean isDestination() {
+        return destination;
+    }
 
     public Point2D getLocation() {
         return location;

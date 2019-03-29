@@ -23,7 +23,8 @@ public class TiledMap {
     private static final int FLIP_D_FLAG = 0x20000000;
 
     ArrayList<BufferedImage> tilesImages;
-    private int[][] map;
+//    private BufferedImage cacheImage;
+//    private int[][] map;
     private ArrayList<TiledLayer> layers;
     private ArrayList<TiledTileSet> tilesets;
     private ArrayList<ArrayList<Tile>> tilesByLayer;
@@ -86,9 +87,11 @@ public class TiledMap {
                         index -= tileSet.get().getFirstgid();
                         if (layers.get(i).getName().equals("collision")) {
                             switch (index){
-                                case 1871: layeredTiles.add(new Tile(new Point2D.Double(x*16, y*16), false));
+                                case 1871: layeredTiles.add(new Tile(new Point2D.Double(x*16, y*16), false, false));
                                 break;
-                                default: layeredTiles.add(new Tile(new Point2D.Double(x*16, y*16), true));
+                                case 1836: layeredTiles.add(new Tile(new Point2D.Double(x*16, y*16), true, true));
+                                break;
+                                default: layeredTiles.add(new Tile(new Point2D.Double(x*16, y*16), true, false));
                             }
 
 
@@ -136,9 +139,11 @@ public class TiledMap {
     }
 
 
+    public ArrayList<ArrayList<Tile>> getTilesByLayer() {
+        return tilesByLayer;
+    }
 
-
-        public void draw(FXGraphics2D g)
+    public void draw(FXGraphics2D g)
         {
             for (int i = 0; i < tilesByLayer.size(); i++) {
                 ArrayList<Tile> sublist = tilesByLayer.get(i);
@@ -146,6 +151,8 @@ public class TiledMap {
                     sublist.get(j).draw(g);
                 }
             }
+
+
 
 //            for(int y = 0; y < tilemap.getHeight(); y++)
 //            {
@@ -162,6 +169,9 @@ public class TiledMap {
 
 
         }
+
+
+
 
 }
 

@@ -1,4 +1,7 @@
 import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.geom.AffineTransform;
+import java.awt.geom.Ellipse2D;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -23,6 +26,20 @@ public class Person {
         }
         this.angle = Math.random()*2*Math.PI;
     }
+
+    public void draw(Graphics2D g)
+    {
+        AffineTransform tx = new AffineTransform();
+        tx.translate(position.getX()-16, position.getY()-16);
+        tx.rotate(angle, 16, 16);
+
+        g.drawImage(image, tx, null);
+
+     //   g.draw(new Ellipse2D.Double(position.getX()-16, position.getY()-16,32,32));
+
+    }
+
+
 
     public void setTarget(Point2D target) {
         this.target = target;
