@@ -87,11 +87,11 @@ public class TiledMap {
                         index -= tileSet.get().getFirstgid();
                         if (layers.get(i).getName().equals("collision")) {
                             switch (index){
-                                case 1871: layeredTiles.add(new Tile(new Point2D.Double(x*16, y*16), false, false));
+                                case 1871: layeredTiles.add(new Tile(x, y, new Point2D.Double(x*16, y*16), false, false));
                                 break;
-                                case 1836: layeredTiles.add(new Tile(new Point2D.Double(x*16, y*16), true, true));
+                                case 1836: layeredTiles.add(new Tile(x, y, new Point2D.Double(x*16, y*16), true, true));
                                 break;
-                                default: layeredTiles.add(new Tile(new Point2D.Double(x*16, y*16), true, false));
+                                default: layeredTiles.add(new Tile(x, y, new Point2D.Double(x*16, y*16), true, false));
                             }
 
 
@@ -149,6 +149,9 @@ public class TiledMap {
                 ArrayList<Tile> sublist = tilesByLayer.get(i);
                 for (int j = 0; j < sublist.size(); j++) {
                     sublist.get(j).draw(g);
+                 //   if (i == 1 && j > 700) {
+                 //       g.drawString(j + "", (int) sublist.get(j).getLocation().getX(), (int) sublist.get(j).getLocation().getY());
+                 //   }
                 }
             }
 

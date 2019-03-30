@@ -13,6 +13,9 @@ public class Tile {
     private int flags = 0;
     private boolean collision;
     private boolean destination;
+    private int y;
+    private int x;
+    private int distance;
 
     public Tile(Point2D location, BufferedImage image, int flags) {
         this.location = location;
@@ -20,12 +23,26 @@ public class Tile {
         this.flags = flags;
         this.collision = false;
         this.destination = false;
+        this.distance = 0;
     }
 
-    public Tile(Point2D location, boolean collision, boolean destination) {
+    public Tile(Tile tile, int distance){
+        this.location = tile.getLocation();
+        this.x = tile.getX();
+        this.y = tile.getY();
+        this.collision = tile.isCollision();
+        this.destination = tile.isDestination();
+        this.distance = distance;
+    }
+
+
+    public Tile(int x, int y, Point2D location, boolean collision, boolean destination) {
         this.location = location;
+        this.x = x;
+        this.y = y;
         this.collision = collision;
         this.destination = destination;
+        this.distance = 0;
     }
 
     public void draw(FXGraphics2D g) {
@@ -40,6 +57,23 @@ public class Tile {
 
     public boolean isDestination() {
         return destination;
+    }
+
+    public int getDistance() {
+        return distance;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    @Override
+    public String toString() {
+        return "x: " + this.x + ". y: " + this.y;
     }
 
     public Point2D getLocation() {

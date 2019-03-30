@@ -21,6 +21,7 @@ public class MapDemo extends Application {
     private ArrayList<Person> students;
     private ArrayList<Destination> destinations;
     public Point2D position;
+    Pathfinding p;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -44,7 +45,12 @@ public class MapDemo extends Application {
         canvas.setOnMouseClicked(e ->
         {
             position = new Point2D.Double(e.getX(), e.getY());
-            System.out.println(position);
+            for (Tile tile : map.getTilesByLayer().get(0)){
+                if (position.getY() >= tile.getLocation().getY() && position.getX() >= tile.getLocation().getX() && position.getY() <= tile.getLocation().getY()+16 && position.getX() <= tile.getLocation().getX()+16 ){
+                    System.out.println(tile.getLocation());
+                    System.out.println(tile.toString());
+                }
+            }
         });
         stage.setScene(new Scene(mainPane));
         stage.setTitle("Map");
@@ -60,12 +66,17 @@ public class MapDemo extends Application {
 
         map = new TiledMap("school2_met_collision.json");
         students = new ArrayList<>();
+        p = new Pathfinding(map.getTilesByLayer().get(0), 5, 1);
+        for (Tile tile : p.getMap()){
+            System.out.println(tile.getDistance());
+        }
 
 
        for (int i = 0; i < STUDENTS; i++){
             int temp = map.getTilesByLayer().get(1).size();
             Point2D spawn = map.getTilesByLayer().get(1).get(temp-1001-(i*-4)).getLocation();
             students.add(new Person(spawn));
+
         }
 
     }
