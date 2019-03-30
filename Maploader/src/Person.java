@@ -38,7 +38,25 @@ public class Person {
      //   g.draw(new Ellipse2D.Double(position.getX()-16, position.getY()-16,32,32));
 
     }
-
+ 		//Movement
+    public void update(ArrayList<Character> characters){
+        Point2D.Double newPosition = new Point2D.Double(0,0);
+        if (position.getX() < target.getX()){
+            dirVector.setLocation(speed,0);
+        }
+        if (position.getX() > target.getX()){
+            dirVector.setLocation(-speed,0);
+        }
+        if (position.getY() < target.getY()){
+            dirVector.setLocation(0,speed);
+        }
+        if (position.getY() > target.getY()){
+            dirVector.setLocation(0,-speed);
+        }
+        if (position.distance(target) < 5)
+            dirVector.setLocation(0,0);
+        newPosition.setLocation(position.getX() + dirVector.getX(),position.getY() +dirVector.getY());
+    }
 
 
     public void setTarget(Point2D target) {
