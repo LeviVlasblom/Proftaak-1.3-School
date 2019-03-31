@@ -137,24 +137,13 @@ public class TiledMap {
 //                }
 //            }
 //        }
+        redrawCache();
     }
 
 
     public ArrayList<ArrayList<Tile>> getTilesByLayer() {
         return tilesByLayer;
     }
-
-    public void draw(FXGraphics2D g)
-        {
-            for (int i = 0; i < tilesByLayer.size(); i++) {
-                ArrayList<Tile> sublist = tilesByLayer.get(i);
-                for (int j = 0; j < sublist.size(); j++) {
-                    sublist.get(j).draw(g);
-                 //   if (i == 1 && j > 700) {
-                 //       g.drawString(j + "", (int) sublist.get(j).getLocation().getX(), (int) sublist.get(j).getLocation().getY());
-                 //   }
-                }
-            }
 
 
 
@@ -172,8 +161,8 @@ public class TiledMap {
 //            }
 
 
-        }
-       /*
+
+
         public void redrawCache(){
         cacheImage = new BufferedImage(1376 ,1152, BufferedImage.TYPE_INT_ARGB);
         Graphics2D imageGraphics = cacheImage.createGraphics();
@@ -182,7 +171,7 @@ public class TiledMap {
 
 
         public TiledMap(){
-        redrawCache();
+
         }
 
         public void draw(Graphics2D g){
@@ -190,14 +179,13 @@ public class TiledMap {
         }
 
         public void drawCache(Graphics2D g){
-            for(int i = 0; i < 10000; i++)
-            {
-                Point2D pos = new Point2D.Double(Math.random()*1920, Math.random()*1080);
-                g.setPaint(new RadialGradientPaint((float)pos.getX(), (float)pos.getY(), 25, new float[] { 0, 1 }, new Color[] { Color.darkGray, Color.green}));
-                g.fill(new Ellipse2D.Double(pos.getX()-25, pos.getY()-25, 50, 50));
+            for (int i = 0; i < tilesByLayer.size(); i++) {
+                ArrayList<Tile> sublist = tilesByLayer.get(i);
+                for (int j = 0; j < sublist.size(); j++) {
+                    sublist.get(j).draw(g);
+                }
             }
         }
-      */
 
 
 }

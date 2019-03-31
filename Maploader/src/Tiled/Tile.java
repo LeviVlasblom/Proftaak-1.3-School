@@ -2,6 +2,7 @@ package Tiled;
 
 import org.jfree.fx.FXGraphics2D;
 
+import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Point2D;
 import java.awt.image.AffineTransformOp;
@@ -46,7 +47,7 @@ public class Tile {
         this.distance = 0;
     }
 
-    public void draw(FXGraphics2D g) {
+    public void draw(Graphics2D g) {
         AffineTransform transform = new AffineTransform();
         transform.translate(location.getX(), location.getY());
         g.drawImage(image, transform, null);

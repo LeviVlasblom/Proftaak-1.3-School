@@ -49,6 +49,7 @@ public class MapDemo extends Application {
                 if (position.getY() >= tile.getLocation().getY() && position.getX() >= tile.getLocation().getX() && position.getY() <= tile.getLocation().getY()+16 && position.getX() <= tile.getLocation().getX()+16 ){
                     System.out.println(tile.getLocation());
                     System.out.println(tile.toString());
+                    System.out.println(tile.isCollision());
                 }
             }
         });
@@ -66,10 +67,11 @@ public class MapDemo extends Application {
 
         map = new TiledMap("school2_met_collision.json");
         students = new ArrayList<>();
-        p = new Pathfinding(map.getTilesByLayer().get(0), 2, 1);
-        for (Tile tile : p.getMap()){
-            System.out.println(tile.getDistance());
-        }
+     //   p = new Pathfinding(map.getTilesByLayer().get(0), 40, 36);
+   //     for (Tile tile : p.getMap()){
+    //        System.out.println(tile.getDistance());
+
+   //     }
 
        for (int i = 0; i < STUDENTS; i++){
             int temp = map.getTilesByLayer().get(1).size();
@@ -97,8 +99,8 @@ public class MapDemo extends Application {
     public void update(double deltaTime)
     {
 
-       for (Person student : students) {
-            student.updateTile(map.getTilesByLayer().get(0));
+    /*   for (Person student : students) {
+            student.updateTile(p.getMap());
             ArrayList<Tile> nearTiles = student.getCurrentTile().getNearTiles(map.getTilesByLayer().get(0), student.getCurrentTile());
             Tile nearest = student.getCurrentTile();
             for (Tile tile : nearTiles){
@@ -107,7 +109,7 @@ public class MapDemo extends Application {
                 }
             }
             student.moveChar(student.getCurrentTile(), nearest);
-        }
+        }*/
     }
 
 
