@@ -25,10 +25,11 @@ public class TiledMap {
 
     ArrayList<BufferedImage> tilesImages;
     private BufferedImage cacheImage;
-//    private int[][] map;
+    private boolean[][] collision;
     private ArrayList<TiledLayer> layers;
     private ArrayList<TiledTileSet> tilesets;
     private ArrayList<ArrayList<Tile>> tilesByLayer;
+
 //    private TiledTile tile;
 //    private TiledTileMap tilemap;
 
@@ -40,6 +41,7 @@ public class TiledMap {
         }catch(Exception e){
             System.out.print(e.getMessage());
         }
+        collision = new boolean[86][72];
         layers = new ArrayList<>();
         tilesets = new ArrayList<>();
         tilesImages = new ArrayList<>();
@@ -89,10 +91,13 @@ public class TiledMap {
                         if (layers.get(i).getName().equals("collision")) {
                             switch (index){
                                 case 1871: layeredTiles.add(new Tile(x, y, new Point2D.Double(x*16, y*16), true, false));
-                                break;
+                                        collision[x][y] = true;
+                                    break;
                                 case 1836: layeredTiles.add(new Tile(x, y, new Point2D.Double(x*16, y*16), false, true));
+                                    collision[x][y] = false;
                                 break;
                                 default: layeredTiles.add(new Tile(x, y, new Point2D.Double(x*16, y*16), false, false));
+                                    collision[x][y] = false;
                             }
 
 
@@ -161,17 +166,10 @@ public class TiledMap {
 //            }
 
 
-
-
         public void redrawCache(){
         cacheImage = new BufferedImage(1376 ,1152, BufferedImage.TYPE_INT_ARGB);
         Graphics2D imageGraphics = cacheImage.createGraphics();
         drawCache(imageGraphics);
-        }
-
-
-        public TiledMap(){
-
         }
 
         public void draw(Graphics2D g){
@@ -187,7 +185,9 @@ public class TiledMap {
             }
         }
 
-
+    public boolean[][] getCollision() {
+        return collision;
+    }
 }
 
 

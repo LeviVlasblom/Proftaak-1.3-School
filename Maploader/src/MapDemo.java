@@ -21,7 +21,7 @@ public class MapDemo extends Application {
     private ArrayList<Person> students;
     private ArrayList<Destination> destinations;
     public Point2D position;
-    Pathfinding p;
+    Pathfind p;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -47,9 +47,9 @@ public class MapDemo extends Application {
             position = new Point2D.Double(e.getX(), e.getY());
             for (Tile tile : map.getTilesByLayer().get(0)){
                 if (position.getY() >= tile.getLocation().getY() && position.getX() >= tile.getLocation().getX() && position.getY() <= tile.getLocation().getY()+16 && position.getX() <= tile.getLocation().getX()+16 ){
-                    System.out.println(tile.getLocation());
+                   // System.out.println(tile.getLocation());
                     System.out.println(tile.toString());
-                    System.out.println(tile.isCollision());
+                    System.out.println(p.getDistancemap()[tile.getX()][tile.getY()]);
                 }
             }
         });
@@ -67,6 +67,11 @@ public class MapDemo extends Application {
 
         map = new TiledMap("school2_met_collision.json");
         students = new ArrayList<>();
+        p = new Pathfind(43, 61, map.getCollision());
+
+
+
+
      //   p = new Pathfinding(map.getTilesByLayer().get(0), 40, 36);
    //     for (Tile tile : p.getMap()){
     //        System.out.println(tile.getDistance());
