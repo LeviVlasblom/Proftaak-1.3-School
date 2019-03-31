@@ -66,11 +66,10 @@ public class MapDemo extends Application {
 
         map = new TiledMap("school2_met_collision.json");
         students = new ArrayList<>();
-        p = new Pathfinding(map.getTilesByLayer().get(0), 5, 1);
+        p = new Pathfinding(map.getTilesByLayer().get(0), 2, 1);
         for (Tile tile : p.getMap()){
             System.out.println(tile.getDistance());
         }
-
 
        for (int i = 0; i < STUDENTS; i++){
             int temp = map.getTilesByLayer().get(1).size();
@@ -97,8 +96,17 @@ public class MapDemo extends Application {
 
     public void update(double deltaTime)
     {
-        for (Person student : students) {
-            student.update(students);
+
+       for (Person student : students) {
+            student.updateTile(map.getTilesByLayer().get(0));
+            ArrayList<Tile> nearTiles = student.getCurrentTile().getNearTiles(map.getTilesByLayer().get(0), student.getCurrentTile());
+            Tile nearest = student.getCurrentTile();
+            for (Tile tile : nearTiles){
+                if (tile.getDistance() < nearest.getDistance()){
+                    nearest = tile;
+                }
+            }
+            student.moveChar(student.getCurrentTile(), nearest);
         }
     }
 

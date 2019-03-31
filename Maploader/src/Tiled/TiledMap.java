@@ -10,6 +10,7 @@ import javax.json.JsonReader;
 import javax.swing.text.html.Option;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
+import java.awt.geom.Ellipse2D;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
@@ -23,7 +24,7 @@ public class TiledMap {
     private static final int FLIP_D_FLAG = 0x20000000;
 
     ArrayList<BufferedImage> tilesImages;
-//    private BufferedImage cacheImage;
+    private BufferedImage cacheImage;
 //    private int[][] map;
     private ArrayList<TiledLayer> layers;
     private ArrayList<TiledTileSet> tilesets;
@@ -87,11 +88,11 @@ public class TiledMap {
                         index -= tileSet.get().getFirstgid();
                         if (layers.get(i).getName().equals("collision")) {
                             switch (index){
-                                case 1871: layeredTiles.add(new Tile(x, y, new Point2D.Double(x*16, y*16), false, false));
+                                case 1871: layeredTiles.add(new Tile(x, y, new Point2D.Double(x*16, y*16), true, false));
                                 break;
-                                case 1836: layeredTiles.add(new Tile(x, y, new Point2D.Double(x*16, y*16), true, true));
+                                case 1836: layeredTiles.add(new Tile(x, y, new Point2D.Double(x*16, y*16), false, true));
                                 break;
-                                default: layeredTiles.add(new Tile(x, y, new Point2D.Double(x*16, y*16), true, false));
+                                default: layeredTiles.add(new Tile(x, y, new Point2D.Double(x*16, y*16), false, false));
                             }
 
 
@@ -172,8 +173,31 @@ public class TiledMap {
 
 
         }
+       /*
+        public void redrawCache(){
+        cacheImage = new BufferedImage(1376 ,1152, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D imageGraphics = cacheImage.createGraphics();
+        drawCache(imageGraphics);
+        }
 
 
+        public TiledMap(){
+        redrawCache();
+        }
+
+        public void draw(Graphics2D g){
+        g.drawImage(cacheImage, new AffineTransform(), null);
+        }
+
+        public void drawCache(Graphics2D g){
+            for(int i = 0; i < 10000; i++)
+            {
+                Point2D pos = new Point2D.Double(Math.random()*1920, Math.random()*1080);
+                g.setPaint(new RadialGradientPaint((float)pos.getX(), (float)pos.getY(), 25, new float[] { 0, 1 }, new Color[] { Color.darkGray, Color.green}));
+                g.fill(new Ellipse2D.Double(pos.getX()-25, pos.getY()-25, 50, 50));
+            }
+        }
+      */
 
 
 }

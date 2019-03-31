@@ -12,6 +12,15 @@ public class Pathfinding {
         ArrayList<Tile> Tiles2 = new ArrayList<>();
         map = new ArrayList<>();
         int distance = 2;
+        Tile startTile;
+        for (Tile tile: tiles) {
+            if (tile.getX() == x && tile.getY() == y){
+                startTile = tile;
+                map.add(new Tile(startTile, 0));
+            }
+        }
+
+
             for (Tile tile : tiles) {
                     if (tileup(tile, x, y, 1) || tileright(tile, x, y, 1) || tileleft(tile, x, y, 1) || tiledown(tile, x, y, 1)) {
                         map.add(new Tile(tile, 1));
@@ -34,40 +43,48 @@ public class Pathfinding {
     }
 
 
-    public boolean tileup(Tile tile, int x, int y, int distance) {
-        if (tile.getX() == x && tile.getY() == y + 1 && tile.isCollision()){
+    public boolean tiledown(Tile tile, int x, int y, int distance) {
+        if (tile.getX() == x && tile.getY() - 1 == y && !tile.isCollision()){
             for (Tile compareTile: map){
-                if (compareTile.getY() == tile.getY() && compareTile.getX() == tile.getX() && (compareTile.getDistance() < distance || compareTile.getDistance() == 0)){
-                    return true;
+                if (compareTile.getY() == tile.getY() && compareTile.getX() == tile.getX() && (compareTile.getDistance() > distance)){
+                    return false;
+                }else{
+                    return  true;
                 }
             }
         }return false;
     }
     public boolean tileleft(Tile tile, int x, int y, int distance) {
-        if (tile.getX() == x - 1 && tile.getY() == y && !tile.isCollision()){
+        if (tile.getX() - 1 == x && tile.getY() == y && !tile.isCollision()){
             for (Tile compareTile: map){
-                if (compareTile.getY() == tile.getY() && compareTile.getX() == tile.getX() && (compareTile.getDistance() < distance || compareTile.getDistance() == 0)){
-                    return true;
+                if (compareTile.getY() == tile.getY() && compareTile.getX() == tile.getX() && (compareTile.getDistance() > distance)){
+                    return false;
+                }else{
+                    return  true;
                 }
-            }return false;
+            }
         }return false;
     }
     public boolean tileright(Tile tile, int x, int y, int distance) {
-        if (tile.getX() == x + 1 && tile.getY() == y && !tile.isCollision()){
+        if (tile.getX() + 1 == x && tile.getY() == y && !tile.isCollision()){
             for (Tile compareTile: map){
-                if (compareTile.getY() == tile.getY() && compareTile.getX() == tile.getX() && (compareTile.getDistance() < distance || compareTile.getDistance() == 0)){
-                    return true;
+                if (compareTile.getY() == tile.getY() && compareTile.getX() == tile.getX() && (compareTile.getDistance() > distance)){
+                    return false;
+                }else{
+                    return  true;
                 }
-            }return false;
+            }
         }return false;
     }
-    public boolean tiledown(Tile tile, int x, int y, int distance) {
-        if (tile.getX() == x && tile.getY() == y - 1 && !tile.isCollision()){
+    public boolean tileup(Tile tile, int x, int y, int distance) {
+        if (tile.getX() == x && tile.getY() + 1 == y && !tile.isCollision()){
             for (Tile compareTile: map){
-                if (compareTile.getY() == tile.getY() && compareTile.getX() == tile.getX() && (compareTile.getDistance() < distance || compareTile.getDistance() == 0)){
-                    return true;
+                if (compareTile.getY() == tile.getY() && compareTile.getX() == tile.getX() && (compareTile.getDistance() > distance)){
+                    return false;
+                }else{
+                    return  true;
                 }
-            }return false;
+            }
         }return false;
     }
 

@@ -6,6 +6,7 @@ import java.awt.geom.AffineTransform;
 import java.awt.geom.Point2D;
 import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
 public class Tile {
     private Point2D location;
@@ -70,6 +71,26 @@ public class Tile {
     public int getX() {
         return x;
     }
+
+    public ArrayList<Tile> getNearTiles(ArrayList<Tile> tiles, Tile position){
+        ArrayList<Tile> nearTiles = new ArrayList<>();
+        for (Tile tile : tiles){
+            if (tile.getX() == position.getX() + 1 && position.getY() == tile.getY()){
+                nearTiles.add(tile);
+            }
+            if (tile.getX() == position.getX() - 1 && position.getY() == tile.getY()){
+                nearTiles.add(tile);
+            }
+            if (tile.getX() == position.getX() && position.getY() + 1 == tile.getY()){
+                nearTiles.add(tile);
+            }
+            if (tile.getX() == position.getX()  && position.getY() - 1 == tile.getY()){
+                nearTiles.add(tile);
+            }
+        }
+        return nearTiles;
+    }
+
 
     @Override
     public String toString() {

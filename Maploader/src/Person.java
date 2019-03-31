@@ -14,6 +14,7 @@ public class Person {
     private double angle;
     private double speed = 5;
     private BufferedImage image;
+    private Tile currentTile;
     private Point2D target;
     private Point2D dirVector;
 
@@ -67,13 +68,13 @@ public class Person {
 
     public void moveChar(Tile CurrentTile,Tile MoveTile){
         if ((CurrentTile.getX() + 1 == MoveTile.getX())){
-            position = new Point2D.Double(MoveTile.getX(),MoveTile.getY());
+            position = new Point2D.Double(MoveTile.getLocation().getX(),MoveTile.getLocation().getY());
         }else if (CurrentTile.getX() - 1 == MoveTile.getX()){
-            position = new Point2D.Double(MoveTile.getX(),MoveTile.getY());
+            position = new Point2D.Double(MoveTile.getLocation().getX(),MoveTile.getLocation().getY());
         }else if (CurrentTile.getY() + 1 == MoveTile.getY()){
-            position = new Point2D.Double(MoveTile.getX(),MoveTile.getY());
+            position = new Point2D.Double(MoveTile.getLocation().getX(),MoveTile.getLocation().getY());
         }else if (CurrentTile.getY() - 1 == MoveTile.getY()){
-            position = new Point2D.Double(MoveTile.getX(),MoveTile.getY());
+            position = new Point2D.Double(MoveTile.getLocation().getX(),MoveTile.getLocation().getY());
         }
     }
 
@@ -110,5 +111,18 @@ public class Person {
 //    }
     public void setTarget(Point2D target) {
         this.target = target;
+    }
+
+
+    public void updateTile(ArrayList<Tile> map){
+        for (Tile tile : map){
+            if (position.getY() >= tile.getLocation().getY() && position.getX() >= tile.getLocation().getX() && position.getY() <= tile.getLocation().getY()+16 && position.getX() <= tile.getLocation().getX()+16 ){
+                this.currentTile = tile;
+            }
+        }
+    }
+
+    public Tile getCurrentTile() {
+        return currentTile;
     }
 }
