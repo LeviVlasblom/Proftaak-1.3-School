@@ -1,3 +1,5 @@
+import Tiled.Tile;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -5,15 +7,15 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Person {
     private Point2D position;
     private double angle;
-
     private double speed = 5;
     private BufferedImage image;
-
     private Point2D target;
+    private Point2D dirVector;
 
     public Person(Point2D position)
     {
@@ -27,6 +29,7 @@ public class Person {
         this.angle = Math.random()*2*Math.PI;
     }
 
+
     public void draw(Graphics2D g)
     {
         AffineTransform tx = new AffineTransform();
@@ -38,8 +41,12 @@ public class Person {
      //   g.draw(new Ellipse2D.Double(position.getX()-16, position.getY()-16,32,32));
 
     }
- 		//Movement
-    public void update(ArrayList<Character> characters){
+
+    /**
+     * Movement
+     * @param characters
+     */
+    public void update(ArrayList<Person> characters){
         Point2D.Double newPosition = new Point2D.Double(0,0);
         if (position.getX() < target.getX()){
             dirVector.setLocation(speed,0);
@@ -58,7 +65,49 @@ public class Person {
         newPosition.setLocation(position.getX() + dirVector.getX(),position.getY() +dirVector.getY());
     }
 
+    public void moveChar(Tile CurrentTile,Tile MoveTile){
+        if ((CurrentTile.getX() + 1 == MoveTile.getX())){
+            position = new Point2D.Double(MoveTile.getX(),MoveTile.getY());
+        }else if (CurrentTile.getX() - 1 == MoveTile.getX()){
+            position = new Point2D.Double(MoveTile.getX(),MoveTile.getY());
+        }else if (CurrentTile.getY() + 1 == MoveTile.getY()){
+            position = new Point2D.Double(MoveTile.getX(),MoveTile.getY());
+        }else if (CurrentTile.getY() - 1 == MoveTile.getY()){
+            position = new Point2D.Double(MoveTile.getX(),MoveTile.getY());
+        }
+    }
 
+    //    public void moveChar(Tile CurrentTile,Tile MoveTile){
+//        if ((CurrentTile.getX() + 1 == MoveTile.getX())){
+//            setTarget(new Point2D.Double(MoveTile.getX(),MoveTile.getY()));
+//        }else if (CurrentTile.getX() - 1 == MoveTile.getX()){
+//            setTarget(new Point2D.Double(MoveTile.getX(),MoveTile.getY()));
+//        }else if (CurrentTile.getY() + 1 == MoveTile.getY()){
+//            setTarget(new Point2D.Double(MoveTile.getX(),MoveTile.getY()));
+//        }else if (CurrentTile.getY() - 1 == MoveTile.getY()){
+//            setTarget(new Point2D.Double(MoveTile.getX(),MoveTile.getY()));
+//        }
+//    }
+
+    //    public void update(ArrayList<Character> characters,Destination destination){
+//
+//        Point2D.Double newPosition = new Point2D.Double(0,0);
+//        if (position.getX() < destination.getLocationStudent().getX()){
+//            dirVector.setLocation(speed,0);
+//        }
+//        if (position.getX() > destination.getLocationStudent().getX()){
+//            dirVector.setLocation(-speed,0);
+//        }
+//        if (position.getY() < destination.getLocationStudent().getY()){
+//            dirVector.setLocation(0,speed);
+//        }
+//        if (position.getY() > destination.getLocationStudent().getY()){
+//            dirVector.setLocation(0,-speed);
+//        }
+//        if (position.distance(destination.getLocationStudent()) < 5)
+//            dirVector.setLocation(0,0);
+//        newPosition.setLocation(position.getX() + dirVector.getX(),position.getY() +dirVector.getY());
+//    }
     public void setTarget(Point2D target) {
         this.target = target;
     }

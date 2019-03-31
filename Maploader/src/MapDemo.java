@@ -97,8 +97,9 @@ public class MapDemo extends Application {
 
     public void update(double deltaTime)
     {
-
-
+        for (Person student : students) {
+            student.update(students);
+        }
     }
 
 
