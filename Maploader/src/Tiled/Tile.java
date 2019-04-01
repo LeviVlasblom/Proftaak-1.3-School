@@ -8,6 +8,7 @@ import java.awt.geom.Point2D;
 import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Tile {
     private Point2D location;
@@ -92,6 +93,20 @@ public class Tile {
         return nearTiles;
     }
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Tile tile = (Tile) o;
+        return y == tile.y &&
+                x == tile.x;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(y, x);
+    }
 
     @Override
     public String toString() {

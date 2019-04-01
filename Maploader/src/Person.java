@@ -13,16 +13,19 @@ import java.util.ArrayList;
 public class Person {
     private Point2D position;
     private double angle;
-    private double speed = 5;
+    private double speed = 0.5;
     private BufferedImage image;
     private Tile currentTile;
     private Target target;
     private Point2D dirVector;
     private boolean gender; //true = boy false = girl
+    private boolean teacher;
+
 
     public Person(Point2D position)
     {
-        this.gender = false;
+        this.teacher = false;
+        this.gender = getRandomBoolean();
         this.position = position;
         this.angle = 0;
         try {
@@ -31,6 +34,20 @@ public class Person {
             }else {
                 image = ImageIO.read(this.getClass().getResource("/female.png"));
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        this.angle = Math.random()*2*Math.PI;
+    }
+
+    public Person(Point2D position, boolean teacher)
+    {
+        this.teacher = teacher;
+        this.gender = getRandomBoolean();
+        this.position = position;
+        this.angle = 0;
+        try {
+                image = ImageIO.read(this.getClass().getResource("/teacher.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -77,7 +94,7 @@ public class Person {
         if ((CurrentTile.getX() + 1 == MoveTile.getX())){
             position = new Point2D.Double(MoveTile.getLocation().getX(),MoveTile.getLocation().getY());
         }else if (CurrentTile.getX() - 1 == MoveTile.getX()){
-            position = new Point2D.Double(MoveTile.getLocation().getX(),MoveTile.getLocation().getY());
+            position = new Point2D.Double((MoveTile.getLocation().getX()),MoveTile.getLocation().getY());
         }else if (CurrentTile.getY() + 1 == MoveTile.getY()){
             position = new Point2D.Double(MoveTile.getLocation().getX(),MoveTile.getLocation().getY());
         }else if (CurrentTile.getY() - 1 == MoveTile.getY()){
@@ -120,6 +137,9 @@ public class Person {
         this.target = target;
     }
 
+    public static boolean getRandomBoolean() {
+        return Math.random() < 0.5;
+    }
 
     public void updateTile(ArrayList<Tile> map){
         for (Tile tile : map){
@@ -132,6 +152,8 @@ public class Person {
     public Tile getCurrentTile() {
         return currentTile;
     }
+
+
 
     public Target getTarget() {
         return target;
