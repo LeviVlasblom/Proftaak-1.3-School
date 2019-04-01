@@ -15,7 +15,7 @@ public class Pathfind {
 
 
     public Pathfind(int xDes, int yDes, boolean[][] collision){
-        distancemap = new int[86][72];
+        distancemap = new int[87][73];
         toSearch = new LinkedList<>();
         done = new ArrayList<>();
         boolean delete = false;
@@ -26,6 +26,7 @@ public class Pathfind {
                 this.distancemap[x][y] = MAX_INT;
             }
         }
+        done.add(target);
         distancemap[target.getX()][ target.getY()] = 0;
         while(toSearch.size() > 0) {
             Coordinate bruh = new Coordinate(toSearch.peek().getX(), toSearch.peek().getY());
@@ -35,20 +36,20 @@ public class Pathfind {
             coordinates.add(new Coordinate(bruh.getX() + 1, bruh.getY()));
             coordinates.add(new Coordinate(bruh.getX(), bruh.getY() - 1));
             coordinates.add(new Coordinate(bruh.getX() - 1, bruh.getY()));
-            for (int i = 0; i < coordinates.size(); i++) {
-                if (!collision[coordinates.get(i).getX()][coordinates.get(i).getY()]) {
+           for (Coordinate  co : coordinates){
+               delete = false;
+                if (this.done.contains(co)) {
                     delete = true;
                 }
-                if (done.contains(coordinates.get(i))) {
+                if (co.getY() < 0 || co.getY() >= 72 || co.getX() < 0 || co.getX() >= 86){
                     delete = true;
-                }
-                if (coordinates.get(i).getY() < 0 || coordinates.get(i).getY() > 72 || coordinates.get(i).getX() < 0 || coordinates.get(i).getX() > 86){
-                    delete = true;
-                }
+                }else if (collision[co.getX()][co.getY()]){
+                   delete = true;
+               }
                 if (!delete) {
-                    done.add(coordinates.get(i));
-                    toSearch.add(coordinates.get(i));
-                    this.distancemap[coordinates.get(i).getX()][coordinates.get(i).getY()] = this.distancemap[bruh.getX()][bruh.getY()] +1;
+                    done.add(co);
+                    toSearch.add(co);
+                    this.distancemap[co.getX()][co.getY()] = this.distancemap[bruh.getX()][bruh.getY()] +1;
                 }
             }
             coordinates.clear();
