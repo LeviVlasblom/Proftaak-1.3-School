@@ -1,3 +1,4 @@
+import Maploader.MapDemo;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -45,6 +46,7 @@ public class Gui extends Application {
     private  Label labelEindtijd;
     private  Label labelDocent;
     private  Label labelLokaal;
+    private Label labelJson;
     private  VBox vBox1;
     private  TextField textFieldKlas;
     private ComboBox comboBoxKlas;
@@ -95,6 +97,7 @@ public class Gui extends Application {
     private Tab simulationTab;
     private HBox hboxBtn;
     private VBox vBoxMap;
+    private Button btnSimulate;
 
     @Override
     public void start(Stage stage) {
@@ -139,6 +142,7 @@ public class Gui extends Application {
         }
 
         hboxBtn = new HBox();
+        labelJson = new Label();
         vakken.add("OGP");
         vakken.add("P&OC");
         vakken.add("2DGraphics");
@@ -158,7 +162,7 @@ public class Gui extends Application {
         klassen.add("C");
 
 
-
+        btnSimulate = new Button();
         comboBoxTeacher = new ComboBox(obt);
         labelteacher = new Label();
         borderpane = new BorderPane();
@@ -251,7 +255,7 @@ public class Gui extends Application {
         vBox.setAlignment(javafx.geometry.Pos.CENTER_LEFT);
         vBox.setId("VBox");
         vBox.setPrefHeight(674.0);
-        vBox.setPrefWidth(370.0);
+        vBox.setPrefWidth(390.0);
         vBox.setSpacing(5.0);
 
         hBox.setPrefHeight(503.0);
@@ -382,11 +386,16 @@ public class Gui extends Application {
         borderpane.setLeft(vBox);
         borderpane.setPadding(new Insets(10.0, 0.0, 10.0, 10.0));
 
-        btnMapPicker.setId("buttonOpslaan");
+        btnMapPicker.setId("btnMapPicker");
         btnMapPicker.setMnemonicParsing(false);
         btnMapPicker.setPrefHeight(62.0);
         btnMapPicker.setPrefWidth(214.0);
         btnMapPicker.setText("Choose JSON File");
+
+        btnSimulate.setId("btnSimulatie");
+        btnSimulate.setMnemonicParsing(false);
+        btnSimulate.setPrefWidth(214.0);
+        btnSimulate.setText("Run Simulation");
 
         vBox3.setPrefHeight(674.0);
         vBox3.setPrefWidth(760.0);
@@ -397,7 +406,7 @@ public class Gui extends Application {
 
         separator0.setOrientation(javafx.geometry.Orientation.VERTICAL);
         separator0.setPrefHeight(2.0);
-        separator0.setPrefWidth(20.0);
+        separator0.setPrefWidth(40.0);
 
         vBox4.setPrefHeight(324.0);
         vBox4.setPrefWidth(39.0);
@@ -407,6 +416,7 @@ public class Gui extends Application {
         vBoxMap.setPrefWidth(39.0);
         vBoxMap.setSpacing(40.0);
 
+        labelJson.setText("Json File : ");
         label8.setId("Label8");
         label8.setText("08:00");
 
@@ -480,7 +490,9 @@ public class Gui extends Application {
         vBox1.getChildren().add(comboBoxLokaal);
 
         vBoxMap.getChildren().add(btnMapPicker);
-        //vBox1.getChildren().add(textFieldLokaal);
+        vBoxMap.getChildren().add(labelJson);
+        vBoxMap.getChildren().add(btnSimulate);
+
         hBox.getChildren().add(vBox1);
         hBox.getChildren().add(vBoxTime);
         vBox.getChildren().add(hBox);
@@ -541,6 +553,13 @@ public class Gui extends Application {
             @Override
             public void handle(ActionEvent event) {
                 JsonPicker();
+            }
+        });
+
+        btnSimulate.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                RunSimulation();
             }
         });
 
@@ -667,9 +686,15 @@ public class Gui extends Application {
     }
 
     public void JsonPicker(){
-
+        MapDemo md = new MapDemo();
+        String fileName = md.MapOpener();
+        labelJson.setText("Json File : " + fileName );
     }
 
+    public void RunSimulation(){
+        MapDemo md = new MapDemo();
+        md.init();
+    }
 
 
     public static void main(String[] args)

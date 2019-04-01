@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8da4c7c-d279-4144-97df-fd0a52ee02e0" name="Default Changelist" comment="" />
+    <list default="true" id="f8da4c7c-d279-4144-97df-fd0a52ee02e0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Maploader/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/fxgraphics2d_1_9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Maploader/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/!$Doors1-ClassicSchool.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/!$Doors1-ClassicSchool.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/!$Doors2-ClassicSchool.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/!$Doors2-ClassicSchool.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/!$Doors3-ClassicSchool.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/!$Doors3-ClassicSchool.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/A2-Classic-School.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/A2-Classic-School.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/A4-Classic-School.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/A4-Classic-School.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/B-Classic-School.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/B-Classic-School.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/C-Classic-School.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/C-Classic-School.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/TILESET.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/TILESET.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/dirt-tiles.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/dirt-tiles.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/dude.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/dude.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/female.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/female.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/map.json" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/pacman.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/pacman.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/school2_met_collision.json" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/school2_met_collision.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/school_1_collision_tmx.json" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/school_1_collision_tmx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/school_1tmx..json" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/school_1tmx..json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/squidward.json" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/squidward.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/testmaploader.json" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/testmaploader.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/Resources/wood_tileset.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/wood_tileset.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/RosterHours.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Files/RosterHours.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimulatieProjectV_0.1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SimulatieProjectV_0.1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Maploader/MapDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maploader/MapDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Maploader/Pathfinding.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pathfinding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Maploader/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maploader/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Roster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roster.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,31 +47,31 @@
     <session id="-1596345193">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8295" />
-          <entry key="txt" value="129" />
+          <entry key="java" value="8935" />
+          <entry key="txt" value="138" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8295" />
-          <entry key="PLAIN_TEXT" value="129" />
+          <entry key="JAVA" value="8935" />
+          <entry key="PLAIN_TEXT" value="138" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="java" value="50" />
+          <entry key="java" value="53" />
           <entry key="json" value="1" />
-          <entry key="txt" value="20" />
+          <entry key="txt" value="27" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="50" />
+          <entry key="JAVA" value="53" />
           <entry key="JSON" value="1" />
-          <entry key="PLAIN_TEXT" value="20" />
+          <entry key="PLAIN_TEXT" value="27" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -67,35 +98,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Maploader/Tiled/TiledMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Maploader/Tiled/Tile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Maploader/Tiled/TiledTile.java">
+        <entry file="file://$PROJECT_DIR$/src/Gui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="4828">
+              <caret line="690" column="51" selection-start-line="690" selection-start-column="51" selection-end-line="690" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#19120#19121#0" expanded="true" />
+                <element signature="e#19164#19165#0" expanded="true" />
+                <element signature="e#19317#19318#0" expanded="true" />
+                <element signature="e#19364#19365#0" expanded="true" />
+                <element signature="e#19517#19518#0" expanded="true" />
+                <element signature="e#19583#19584#0" expanded="true" />
+                <element signature="e#19734#19735#0" expanded="true" />
+                <element signature="e#19782#19783#0" expanded="true" />
+                <element signature="e#19936#19937#0" expanded="true" />
+                <element signature="e#20000#20001#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,35 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Maploader/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Maploader/Pathfinding.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Maploader/Tiled/TiledTileMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Maploader/Tiled/TiledLayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="34">
+              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -139,31 +132,61 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Maploader/MapDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Maploader/Tiled/TiledTileSet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Maploader/Destination.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="293">
+              <caret line="136" column="24" selection-start-line="136" selection-start-column="24" selection-end-line="136" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4957#4958#0" expanded="true" />
+                <element signature="e#5002#5003#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Roster.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="49">
+              <caret line="107" column="14" selection-start-line="107" selection-start-column="14" selection-end-line="107" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Files/RosterHours.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Files/Lokalen.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Files/StockHours.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="30" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Files/Students.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="58" column="16" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Files/Vakken.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -173,6 +196,8 @@
       <find>right</find>
       <find>textField</find>
       <find>table</find>
+      <find>readRosterHours</find>
+      <find>tabPane</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -184,14 +209,17 @@
         <option value="$PROJECT_DIR$/src/Class.java" />
         <option value="$PROJECT_DIR$/src/Classroom.java" />
         <option value="$PROJECT_DIR$/src/Teacher.java" />
-        <option value="$PROJECT_DIR$/Files/RosterHours.txt" />
         <option value="$PROJECT_DIR$/Files/Docenten.txt" />
         <option value="$PROJECT_DIR$/src/Subject.java" />
         <option value="$PROJECT_DIR$/Files/StockHours.txt" />
         <option value="$PROJECT_DIR$/src/RosterHours.java" />
-        <option value="$PROJECT_DIR$/src/Roster.java" />
-        <option value="$PROJECT_DIR$/src/Gui.java" />
         <option value="$PROJECT_DIR$/src/Maploader/Tiled/TiledMap.java" />
+        <option value="$PROJECT_DIR$/src/Maploader/Pathfinding.java" />
+        <option value="$PROJECT_DIR$/src/Maploader/Person.java" />
+        <option value="$PROJECT_DIR$/src/Roster.java" />
+        <option value="$PROJECT_DIR$/Files/RosterHours.txt" />
+        <option value="$PROJECT_DIR$/src/Maploader/MapDemo.java" />
+        <option value="$PROJECT_DIR$/src/Gui.java" />
       </list>
     </option>
   </component>
@@ -202,7 +230,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="952" />
     <option name="width" value="977" />
     <option name="height" value="1038" />
   </component>
@@ -222,7 +250,17 @@
             <path>
               <item name="SimulatieProjectV_0.1" type="b2602c69:ProjectViewProjectNode" />
               <item name="SimulatieProjectV_0.1" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="Files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SimulatieProjectV_0.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SimulatieProjectV_0.1" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SimulatieProjectV_0.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SimulatieProjectV_0.1" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SimulatieProjectV_0.1" type="b2602c69:ProjectViewProjectNode" />
@@ -254,8 +292,17 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554070764983" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Maploader" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554107159834" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Maploader/lib/javax.json.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Levi Vlasblom\Desktop\schooltroep\Avans Jaar 1\1.3\Proftaak-School\Proftaak-1.3-School\SimulatieProjectV_0.1\Resources" />
+      <recent name="C:\Users\Levi Vlasblom\Desktop\schooltroep\Avans Jaar 1\1.3\Proftaak-School\Proftaak-1.3-School\SimulatieProjectV_0.1" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -268,6 +315,30 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Application.SimulatieProjectV_0.1">
+    <configuration name="MapDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Maploader.MapDemo" />
+      <module name="SimulatieProjectV_0.1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Maploader.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.SimulatieProjectV_0.1" />
+      <item itemvalue="Application.MapDemo" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MapDemo" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -295,17 +366,18 @@
       <workItem from="1551088967087" duration="11088000" />
       <workItem from="1553868696311" duration="4691000" />
       <workItem from="1554060369216" duration="2953000" />
-      <workItem from="1554071409616" duration="428000" />
+      <workItem from="1554071409616" duration="9996000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75401000" />
+    <option name="totallyTimeSpent" value="84969000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13422818" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13422818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -313,7 +385,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32998565" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3319149" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39432624" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -381,7 +453,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Students.txt" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-803">
@@ -402,19 +473,6 @@
           <caret line="482" column="19" selection-start-line="482" selection-start-column="19" selection-end-line="482" selection-end-column="19" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Files/Students.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="16" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Files/Klassen.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Files/Vakken.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -441,13 +499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Files/Docenten.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -511,6 +562,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="2457" selection-start-line="2457" selection-end-line="2457" />
+          <folding>
+            <element signature="e#39846#39847#0" expanded="true" />
+            <element signature="e#39901#39902#0" expanded="true" />
+            <element signature="e#74731#74732#0" expanded="true" />
+            <element signature="e#74764#74765#0" expanded="true" />
+            <element signature="e#80864#80865#0" expanded="true" />
+            <element signature="e#80901#80902#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -622,74 +681,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Roster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Files/RosterHours.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Files/StockHours.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="30" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SimulatieProjectV_0.1.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="9" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="542" column="29" selection-start-line="542" selection-start-column="29" selection-end-line="542" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#18105#18106#0" expanded="true" />
-            <element signature="e#18149#18150#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maploader/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maploader/Pathfinding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maploader/MapDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maploader/Destination.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -714,32 +709,209 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maploader/Tiled/TiledMap.java">
+    <entry file="file://$PROJECT_DIR$/src/Maploader/Tiled/TiledTile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="34">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maploader/Tiled/TiledMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Maploader/Tiled/Tile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="-186">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maploader/Tiled/TiledTile.java">
+    <entry file="file://$PROJECT_DIR$/Pathfinding.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="-6">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maploader/Destination.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/StockHours.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/Students.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="58" column="16" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/Vakken.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/Docenten.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/Klassen.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/Lokalen.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Roster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="107" column="14" selection-start-line="107" selection-start-column="14" selection-end-line="107" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/RosterHours.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maploader/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maploader/MapDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="136" column="24" selection-start-line="136" selection-start-column="24" selection-end-line="136" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4957#4958#0" expanded="true" />
+            <element signature="e#5002#5003#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4828">
+          <caret line="690" column="51" selection-start-line="690" selection-start-column="51" selection-end-line="690" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#19120#19121#0" expanded="true" />
+            <element signature="e#19164#19165#0" expanded="true" />
+            <element signature="e#19317#19318#0" expanded="true" />
+            <element signature="e#19364#19365#0" expanded="true" />
+            <element signature="e#19517#19518#0" expanded="true" />
+            <element signature="e#19583#19584#0" expanded="true" />
+            <element signature="e#19734#19735#0" expanded="true" />
+            <element signature="e#19782#19783#0" expanded="true" />
+            <element signature="e#19936#19937#0" expanded="true" />
+            <element signature="e#20000#20001#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>javax.json</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>SimulatieProjectV_0.1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>fxgraphics2d-1.9</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

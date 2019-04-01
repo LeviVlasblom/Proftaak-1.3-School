@@ -105,7 +105,7 @@ public class Roster {
 
 
         if (selectedFile != null) {
-            System.out.println("Found u my lord!");
+            //System.out.println("Found u my lord!");
             fileName = selectedFile.getName();
             System.out.println(fileName);
 

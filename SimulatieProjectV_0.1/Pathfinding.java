@@ -1,6 +1,6 @@
 package Maploader;
 
-import Tiled.Tile;
+import Maploader.Tiled.Tile;
 
 import java.util.ArrayList;
 

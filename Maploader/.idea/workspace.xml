@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Tiled/Tile.java" line="20" />
+    <bookmark url="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/Tiled/Tile.java" line="20" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94b8bda3-54a5-47b5-b372-df99155da86b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/.idea/libraries/fxgraphics2d_1_9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/school_1_collision_tmx.json" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/school_1_collision_tmx.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Maploader/Tiled/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Maploader/Tiled/Tile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Maploader/Tiled/TiledMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Maploader/Tiled/TiledMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tiled/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tiled/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tiled/TiledMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tiled/TiledMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/!$Doors1-ClassicSchool.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/!$Doors1-ClassicSchool.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/!$Doors2-ClassicSchool.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/!$Doors2-ClassicSchool.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/!$Doors3-ClassicSchool.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/!$Doors3-ClassicSchool.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/A2-Classic-School.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/A2-Classic-School.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/A4-Classic-School.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/A4-Classic-School.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/B-Classic-School.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/B-Classic-School.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/C-Classic-School.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/C-Classic-School.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/TILESET.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/TILESET.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/dirt-tiles.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/dirt-tiles.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/dude.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/dude.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/female.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/female.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/map.json" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/pacman.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/pacman.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/school2_met_collision.json" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/school2_met_collision.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/school_1_collision_tmx.json" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/school_1_collision_tmx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/school_1tmx..json" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/school_1tmx..json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/squidward.json" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/squidward.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/testmaploader.json" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/testmaploader.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/wood_tileset.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/wood_tileset.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimulatieProjectV_0.1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimulatieProjectV_0.1/SimulatieProjectV_0.1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/SimulatieProjectV_0.1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/MapDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/MapDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/Pathfinding.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/Pathfinding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/Person.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,14 +133,23 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-347291719">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tiled/TiledMap.java">
+        <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/Tiled/TiledMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="21" column="53" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="53" />
+            <state relative-caret-position="119">
+              <caret line="20" column="53" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,10 +158,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Tiled/Tile.java">
+        <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/Tiled/Tile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+            <state relative-caret-position="340">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,36 +170,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tiled/TiledTile.java">
+        <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/Tiled/TiledTile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
+            <state relative-caret-position="374">
               <caret line="29" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/school_1_collision_tmx.json">
+        <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/school_1_collision_tmx.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-              <folding>
-                <element signature="e#71717#72016#0" />
-                <element signature="e#72027#72337#0" />
-                <element signature="e#72348#72650#0" />
-                <element signature="e#72661#79839#0" />
-                <element signature="e#79850#117495#0" />
-                <element signature="e#117506#117820#0" />
-                <element signature="e#117831#119909#0" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tiled/TiledTileMap.java">
+        <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/Tiled/TiledTileMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
+            <state relative-caret-position="136">
               <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#766#767#0" expanded="true" />
@@ -179,9 +201,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tiled/TiledLayer.java">
+        <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/Tiled/TiledLayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
+            <state relative-caret-position="867">
               <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
               <folding>
                 <element signature="e#1661#1662#0" expanded="true" />
@@ -192,24 +214,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MapDemo.java">
+        <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/MapDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="765">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tiled/TiledTileSet.java">
+        <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/Tiled/TiledTileSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
+            <state relative-caret-position="459">
               <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
               <folding>
-                <element signature="e#728#729#0" expanded="true" />
-                <element signature="e#759#760#0" expanded="true" />
-                <element signature="e#879#880#0" expanded="true" />
-                <element signature="e#911#912#0" expanded="true" />
                 <element signature="e#1046#1047#0" expanded="true" />
               </folding>
             </state>
@@ -245,8 +263,15 @@
         <option value="$PROJECT_DIR$/src/MapDemo.java" />
         <option value="$PROJECT_DIR$/src/Tiled/TiledMap.java" />
         <option value="$PROJECT_DIR$/src/Tiled/Tile.java" />
+        <option value="$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/Tiled/Tile.java" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -254,9 +279,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="951" />
-    <option name="width" value="978" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="952" />
+    <option name="width" value="977" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -265,6 +290,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -272,31 +298,17 @@
               <item name="Maploader" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="Maploader" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
-            <path>
-              <item name="Maploader" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Maploader" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="Resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Maploader" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Maploader" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Maploader" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Maploader" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Tiled" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552933643923" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -318,8 +330,8 @@
   </component>
   <component name="RunManager">
     <configuration name="MapDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MapDemo" />
-      <module name="Maploader" />
+      <option name="MAIN_CLASS_NAME" value="Maploader.MapDemo" />
+      <module name="SimulatieProjectV_0.1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -340,20 +352,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551280029471</updated>
+      <workItem from="1554071477446" duration="1431000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1431000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
+    <frame x="762" y="0" width="781" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12166998" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2552011" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329653" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329653" />
@@ -361,12 +378,13 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="TMC Test Results" order="10" />
       <window_info anchor="bottom" id="Boebot Uploader" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32706222" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -377,6 +395,9 @@
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32908848" />
       <window_info anchor="right" id="TMC Project List" order="8" weight="0.3293092" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -405,88 +426,91 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Downloads/wk4_json/wk4_json/src/Map.java" />
-    <entry file="file://$PROJECT_DIR$/Resources/map.json">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/map.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="874">
           <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/testmaploader.json">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/testmaploader.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="713">
           <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/school_1tmx..json">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/school_1tmx..json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/B-Classic-School.png">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/B-Classic-School.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/!$Doors1-ClassicSchool.png">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/!$Doors1-ClassicSchool.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/!$Doors2-ClassicSchool.png">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/!$Doors2-ClassicSchool.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/!$Doors3-ClassicSchool.png">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/!$Doors3-ClassicSchool.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/A2-Classic-School.png">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/A2-Classic-School.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/A4-Classic-School.png">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/A4-Classic-School.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/C-Classic-School.png">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/C-Classic-School.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/dirt-tiles.png">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/dirt-tiles.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/pacman.png">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/pacman.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/wood_tileset.png">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/wood_tileset.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tiled/TiledTileSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
-          <folding>
-            <element signature="e#728#729#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-            <element signature="e#879#880#0" expanded="true" />
-            <element signature="e#911#912#0" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MapDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/squidward.json">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/squidward.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="22" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tiled/TiledTileMap.java">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/Tiled/TiledMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
+        <state relative-caret-position="119">
+          <caret line="20" column="53" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/Tiled/TiledTile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/Resources/school_1_collision_tmx.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/Tiled/TiledTileMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#766#767#0" expanded="true" />
@@ -495,9 +519,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tiled/TiledLayer.java">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/Tiled/TiledLayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
+        <state relative-caret-position="867">
           <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
           <folding>
             <element signature="e#1661#1662#0" expanded="true" />
@@ -506,43 +530,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tiled/TiledTile.java">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/MapDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="765">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/school_1_collision_tmx.json">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/Tiled/TiledTileSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        <state relative-caret-position="459">
+          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
           <folding>
-            <element signature="e#71717#72016#0" />
-            <element signature="e#72027#72337#0" />
-            <element signature="e#72348#72650#0" />
-            <element signature="e#72661#79839#0" />
-            <element signature="e#79850#117495#0" />
-            <element signature="e#117506#117820#0" />
-            <element signature="e#117831#119909#0" />
+            <element signature="e#1046#1047#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tiled/TiledMap.java">
+    <entry file="file://$PROJECT_DIR$/../SimulatieProjectV_0.1/src/Maploader/Tiled/Tile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="21" column="53" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tiled/Tile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,17 +1,20 @@
 package Maploader;
 
-import Tiled.Tile;
-import Tiled.TiledMap;
+import Maploader.Tiled.Tile;
+import Maploader.Tiled.TiledMap;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.jfree.fx.FXGraphics2D;
 import org.jfree.fx.ResizableCanvas;
 import java.awt.*;
 import java.awt.geom.Point2D;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Map;
 
 
 public class MapDemo extends Application {
@@ -22,7 +25,7 @@ public class MapDemo extends Application {
     private ArrayList<Person> students;
     private ArrayList<Destination> destinations;
     public Point2D position;
-    Pathfinding p;
+    //Pathfinding p;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -113,12 +116,29 @@ public class MapDemo extends Application {
         }*/
     }
 
+    public String MapOpener() {
+        String fileName = "";
+        FileChooser fileChooser = new FileChooser();
+        String userDirectoryString = System.getProperty("user.home");
+        File userDirectory = new File(userDirectoryString);
+        fileChooser.setInitialDirectory(userDirectory);
+        File selectedFile = fileChooser.showOpenDialog(null);
 
 
+        if (selectedFile != null) {
+            //System.out.println("Found u my lord!");
+            fileName = selectedFile.getName();
+            System.out.println(fileName);
 
-    public static void main(String[] args)
-    {
-        launch(MapDemo.class);
+            String line = null;
+
+            map = new TiledMap(fileName);
+        }
+        return fileName;
     }
 
-}
+        public static void main (String[]args)
+        {
+            launch(MapDemo.class);
+        }
+    }
