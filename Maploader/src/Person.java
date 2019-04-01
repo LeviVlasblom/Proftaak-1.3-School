@@ -102,6 +102,10 @@ public class Person {
         }
     }
 
+    public boolean isGender() {
+        return gender;
+    }
+
     //    public void moveChar(Tile CurrentTile,Tile MoveTile){
 //        if ((CurrentTile.getX() + 1 == MoveTile.getX())){
 //            setTarget(new Point2D.Double(MoveTile.getX(),MoveTile.getY()));

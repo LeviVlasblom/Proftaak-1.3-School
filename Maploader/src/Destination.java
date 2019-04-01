@@ -1,6 +1,5 @@
 import Tiled.Tile;
 import Tiled.TiledMap;
-import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
 import java.awt.geom.Point2D;

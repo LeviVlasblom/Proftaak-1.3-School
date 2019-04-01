@@ -24,6 +24,7 @@ public class MapDemo extends Application {
     private ArrayList<Person> students;
     private ArrayList<Person> teachers;
     private int counter;
+    private  int updates;
  //   private ArrayList<Destination> destinations;
     public Point2D position;
     public static int OMEGA = 696969;
@@ -136,56 +137,66 @@ public class MapDemo extends Application {
 
     public void update(double deltaTime)
     {
-        counter++;
+        if (updates == 2) {
+            ArrayList<Tile> occupiedTiles = new ArrayList<>();
+            for (Person student : students) {
+                occupiedTiles.add(student.getCurrentTile());
+            }
 
 
-        ArrayList<Tile> occupiedTiles = new ArrayList<>();
-        for (Person student : students) {
-            occupiedTiles.add(student.getCurrentTile());
-        }
-
-
-      for (Person student : students) {
-          if (occupiedTiles.contains(student.getCurrentTile())){
-              student.updateTile(map.getTilesByLayer().get(0));
-              int lol = OMEGA;
-              Tile nearest = student.getCurrentTile();
-              for (Tile tile : student.getCurrentTile().getNearTiles(map.getTilesByLayer().get(0), student.getCurrentTile())){
-                  if (student.getTarget().getPathfind().getDistancemap()[tile.getX()][tile.getY()] < lol && student.getTarget().getPathfind().getDistancemap()[tile.getX()][tile.getY()] > 0 ){
-                      lol = student.getTarget().getPathfind().getDistancemap()[tile.getX()][tile.getY()];
-                      nearest = tile;
-                  }
-              }
-              if (lol > 1){
-                  student.moveChar(student.getCurrentTile(), nearest);
-              }
-          }
-      }
-
-
-        for (Person teacher : teachers) {
-            if (occupiedTiles.contains(teacher.getCurrentTile())){
-                teacher.updateTile(map.getTilesByLayer().get(0));
-                int lol = OMEGA;
-                Tile nearest = teacher.getCurrentTile();
-                for (Tile tile : teacher.getCurrentTile().getNearTiles(map.getTilesByLayer().get(0), teacher.getCurrentTile())){
-                    if (teacher.getTarget().getPathfind().getDistancemap()[tile.getX()][tile.getY()] < lol && teacher.getTarget().getPathfind().getDistancemap()[tile.getX()][tile.getY()] > 0 ){
-                        lol = teacher.getTarget().getPathfind().getDistancemap()[tile.getX()][tile.getY()];
-                        nearest = tile;
+            for (Person student : students) {
+                if (occupiedTiles.contains(student.getCurrentTile())) {
+                    student.updateTile(map.getTilesByLayer().get(0));
+                    int lol = OMEGA;
+                    Tile nearest = student.getCurrentTile();
+                    for (Tile tile : student.getCurrentTile().getNearTiles(map.getTilesByLayer().get(0), student.getCurrentTile())) {
+                        if (student.getTarget().getPathfind().getDistancemap()[tile.getX()][tile.getY()] < lol && student.getTarget().getPathfind().getDistancemap()[tile.getX()][tile.getY()] > 0) {
+                            lol = student.getTarget().getPathfind().getDistancemap()[tile.getX()][tile.getY()];
+                            nearest = tile;
+                        }
+                    }
+                    if (lol > 1) {
+                        student.moveChar(student.getCurrentTile(), nearest);
                     }
                 }
-                if (lol > 1){
-                    teacher.moveChar(teacher.getCurrentTile(), nearest);
+            }
+
+
+            for (Person teacher : teachers) {
+                if (occupiedTiles.contains(teacher.getCurrentTile())) {
+                    teacher.updateTile(map.getTilesByLayer().get(0));
+                    int lol = OMEGA;
+                    Tile nearest = teacher.getCurrentTile();
+                    for (Tile tile : teacher.getCurrentTile().getNearTiles(map.getTilesByLayer().get(0), teacher.getCurrentTile())) {
+                        if (teacher.getTarget().getPathfind().getDistancemap()[tile.getX()][tile.getY()] < lol && teacher.getTarget().getPathfind().getDistancemap()[tile.getX()][tile.getY()] > 0) {
+                            lol = teacher.getTarget().getPathfind().getDistancemap()[tile.getX()][tile.getY()];
+                            nearest = tile;
+                        }
+                    }
+                    if (lol > 1) {
+                        teacher.moveChar(teacher.getCurrentTile(), nearest);
+                    }
                 }
             }
-        }
-
-        if (counter == 10){
-            for (Person p : students){
-                Random rand = new Random();
-                p.setTarget(targetsStudents.get(rand.nextInt(11)));
+            counter++;
+            if (counter == 500) {
+                for (Person p : students) {
+                    Random rand = new Random();
+                    int randomint = rand.nextInt(11);
+                    if (randomint == 11 && p.isGender()){
+                        randomint = 10;
+                    }
+                    if (randomint == 10 && !p.isGender()){
+                        randomint = 11;
+                    }
+                    Target target = targetsStudents.get(randomint);
+                    p.setTarget(target);
+                }
+                counter = 0;
             }
+            updates = 0;
         }
+        updates++;
 
 
     }

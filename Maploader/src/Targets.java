@@ -15,7 +15,7 @@ public class Targets {
         targets.add(new Target("C1",69, 30, collision));
         targets.add(new Target("BB",67, 49, collision));
         targets.add(new Target("GB",76, 49, collision));
-      //  targets.add(new Target("Exit",44, 62, collision));
+        targets.add(new Target("Exit",44, 62, collision));
         return targets;
     }
 
