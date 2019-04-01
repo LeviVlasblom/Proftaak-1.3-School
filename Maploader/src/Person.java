@@ -7,6 +7,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.ArrayList;
 
 public class Person {
@@ -15,15 +16,21 @@ public class Person {
     private double speed = 5;
     private BufferedImage image;
     private Tile currentTile;
-    private Point2D target;
+    private Target target;
     private Point2D dirVector;
+    private boolean gender; //true = boy false = girl
 
     public Person(Point2D position)
     {
+        this.gender = false;
         this.position = position;
         this.angle = 0;
         try {
-            image = ImageIO.read(this.getClass().getResource("/dude.png"));
+            if (gender) {
+                image = ImageIO.read(this.getClass().getResource("/dude.png"));
+            }else {
+                image = ImageIO.read(this.getClass().getResource("/female.png"));
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -45,9 +52,9 @@ public class Person {
 
     /**
      * Movement
-     * @param characters
+     * @param
      */
-    public void update(ArrayList<Person> characters){
+  /*  public void update(ArrayList<Person> characters){
         Point2D.Double newPosition = new Point2D.Double(0,0);
         if (position.getX() < target.getX()){
             dirVector.setLocation(speed,0);
@@ -65,7 +72,7 @@ public class Person {
             dirVector.setLocation(0,0);
         newPosition.setLocation(position.getX() + dirVector.getX(),position.getY() +dirVector.getY());
     }
-
+*/
     public void moveChar(Tile CurrentTile,Tile MoveTile){
         if ((CurrentTile.getX() + 1 == MoveTile.getX())){
             position = new Point2D.Double(MoveTile.getLocation().getX(),MoveTile.getLocation().getY());
@@ -109,7 +116,7 @@ public class Person {
 //            dirVector.setLocation(0,0);
 //        newPosition.setLocation(position.getX() + dirVector.getX(),position.getY() +dirVector.getY());
 //    }
-    public void setTarget(Point2D target) {
+    public void setTarget (Target target) {
         this.target = target;
     }
 
@@ -124,5 +131,9 @@ public class Person {
 
     public Tile getCurrentTile() {
         return currentTile;
+    }
+
+    public Target getTarget() {
+        return target;
     }
 }

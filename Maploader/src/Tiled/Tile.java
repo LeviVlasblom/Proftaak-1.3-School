@@ -95,7 +95,7 @@ public class Tile {
 
     @Override
     public String toString() {
-        return "x: " + this.x + ". y: " + this.y;
+        return this.x + ", " + this.y;
     }
 
     public Point2D getLocation() {
