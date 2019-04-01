@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8da4c7c-d279-4144-97df-fd0a52ee02e0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Maploader/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Maploader/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/out/production/Maploader/Destination.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Maploader/out/production/Maploader/Destination.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/out/production/Maploader/META-INF/Maploader.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/out/production/Maploader/MapDemo$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Maploader/out/production/Maploader/MapDemo$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/out/production/Maploader/MapDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Maploader/out/production/Maploader/MapDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/out/production/Maploader/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Maploader/out/production/Maploader/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/out/production/Maploader/Tiled/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Maploader/out/production/Maploader/Tiled/Tile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/out/production/Maploader/Tiled/TiledMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Maploader/out/production/Maploader/Tiled/TiledMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/out/production/Maploader/dude.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Maploader/out/production/Maploader/dude.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Maploader/out/production/Maploader/female.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Maploader/out/production/Maploader/female.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Files/StockHours.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Files/StockHours.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulatieProjectV_0.1/Gui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimulatieProjectV_0.1/Gui.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Roster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RosterHours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RosterHours.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,37 +28,37 @@
     <session id="-1596345193">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="7472" />
-          <entry key="txt" value="129" />
+          <entry key="java" value="8935" />
+          <entry key="txt" value="138" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7472" />
-          <entry key="PLAIN_TEXT" value="129" />
+          <entry key="JAVA" value="8935" />
+          <entry key="PLAIN_TEXT" value="138" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
-          <entry key="java" value="40" />
+          <entry key="class" value="2" />
+          <entry key="java" value="53" />
           <entry key="json" value="1" />
-          <entry key="txt" value="20" />
-          <entry key="xml" value="1" />
+          <entry key="txt" value="27" />
+          <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="40" />
+          <entry key="CLASS" value="2" />
+          <entry key="JAVA" value="53" />
           <entry key="JSON" value="1" />
-          <entry key="PLAIN_TEXT" value="20" />
-          <entry key="XML" value="1" />
+          <entry key="PLAIN_TEXT" value="27" />
+          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.25" value="1" />
@@ -61,10 +66,14 @@
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.48" value="1" />
+          <entry key="project.open.time.51" value="1" />
+          <entry key="project.open.time.55" value="1" />
+          <entry key="project.open.time.57" value="1" />
           <entry key="project.open.time.64" value="1" />
           <entry key="project.open.time.72" value="1" />
+          <entry key="project.open.time.76" value="1" />
           <entry key="project.open.time.85" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
     </session>
@@ -74,43 +83,31 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Gui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="611" column="47" selection-start-line="611" selection-start-column="47" selection-end-line="611" selection-end-column="47" />
+            <state relative-caret-position="354">
+              <caret line="690" column="51" selection-start-line="690" selection-start-column="51" selection-end-line="690" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#17005#17006#0" expanded="true" />
-                <element signature="e#17053#17054#0" expanded="true" />
-                <element signature="e#21338#21339#0" expanded="true" />
-                <element signature="e#21371#21372#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Class.java">
+        <entry file="file://$PROJECT_DIR$/src/Maploader/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
-              <folding>
-                <element signature="e#820#821#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RosterHours.java">
+        <entry file="file://$PROJECT_DIR$/src/Maploader/MapDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="85" selection-start-line="85" selection-end-line="85" />
+            <state relative-caret-position="2074">
+              <caret line="136" column="24" selection-start-line="136" selection-start-column="24" selection-end-line="136" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2664#2665#0" expanded="true" />
-                <element signature="e#2799#2800#0" expanded="true" />
-                <element signature="e#2831#2832#0" expanded="true" />
-                <element signature="e#2957#2958#0" expanded="true" />
-                <element signature="e#2987#2988#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,8 +116,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Roster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="80" selection-start-line="80" selection-end-line="80" />
+            <state relative-caret-position="1547">
+              <caret line="107" column="14" selection-start-line="107" selection-start-column="14" selection-end-line="107" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -128,10 +125,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Files/RosterHours.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="51">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Files/Lokalen.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -143,6 +145,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Files/Students.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="986">
+              <caret line="58" column="16" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Files/Vakken.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -150,6 +166,8 @@
       <find>right</find>
       <find>textField</find>
       <find>table</find>
+      <find>readRosterHours</find>
+      <find>tabPane</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -161,12 +179,16 @@
         <option value="$PROJECT_DIR$/src/Class.java" />
         <option value="$PROJECT_DIR$/src/Classroom.java" />
         <option value="$PROJECT_DIR$/src/Teacher.java" />
-        <option value="$PROJECT_DIR$/Files/RosterHours.txt" />
         <option value="$PROJECT_DIR$/Files/Docenten.txt" />
         <option value="$PROJECT_DIR$/src/Subject.java" />
         <option value="$PROJECT_DIR$/Files/StockHours.txt" />
         <option value="$PROJECT_DIR$/src/RosterHours.java" />
+        <option value="$PROJECT_DIR$/src/Maploader/Tiled/TiledMap.java" />
+        <option value="$PROJECT_DIR$/src/Maploader/Pathfinding.java" />
+        <option value="$PROJECT_DIR$/src/Maploader/Person.java" />
         <option value="$PROJECT_DIR$/src/Roster.java" />
+        <option value="$PROJECT_DIR$/Files/RosterHours.txt" />
+        <option value="$PROJECT_DIR$/src/Maploader/MapDemo.java" />
         <option value="$PROJECT_DIR$/src/Gui.java" />
       </list>
     </option>
@@ -178,9 +200,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="width" value="1878" />
-    <option name="height" value="1038" />
+    <option name="x" value="950" />
+    <option name="width" value="979" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -188,8 +210,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,30 +222,57 @@
             <path>
               <item name="SimulatieProjectV_0.1" type="b2602c69:ProjectViewProjectNode" />
               <item name="SimulatieProjectV_0.1" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="Files" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SimulatieProjectV_0.1" type="b2602c69:ProjectViewProjectNode" />
               <item name="SimulatieProjectV_0.1" type="462c0819:PsiDirectoryNode" />
-              <item name="Files" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SimulatieProjectV_0.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SimulatieProjectV_0.1" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SimulatieProjectV_0.1" type="b2602c69:ProjectViewProjectNode" />
               <item name="SimulatieProjectV_0.1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SimulatieProjectV_0.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SimulatieProjectV_0.1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Maploader" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SimulatieProjectV_0.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SimulatieProjectV_0.1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Maploader" type="462c0819:PsiDirectoryNode" />
+              <item name="Tiled" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551124445123" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../les1-18-19" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554107159834" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Maploader" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Levi Vlasblom\Desktop\schooltroep\Avans Jaar 1\1.3\Proftaak-School\Proftaak-1.3-School\SimulatieProjectV_0.1\Resources" />
+      <recent name="C:\Users\Levi Vlasblom\Desktop\schooltroep\Avans Jaar 1\1.3\Proftaak-School\Proftaak-1.3-School\SimulatieProjectV_0.1" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -236,6 +285,30 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Application.SimulatieProjectV_0.1">
+    <configuration name="MapDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Maploader.MapDemo" />
+      <module name="SimulatieProjectV_0.1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Maploader.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.SimulatieProjectV_0.1" />
+      <item itemvalue="Application.MapDemo" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MapDemo" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -261,17 +334,20 @@
       <workItem from="1550571506889" duration="7464000" />
       <workItem from="1550659429411" duration="13646000" />
       <workItem from="1551088967087" duration="11088000" />
+      <workItem from="1553868696311" duration="4691000" />
+      <workItem from="1554060369216" duration="2953000" />
+      <workItem from="1554071409616" duration="9996000" />
+      <workItem from="1554108519591" duration="167000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67329000" />
+    <option name="totallyTimeSpent" value="85136000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2872483" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13624161" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -279,8 +355,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3319149" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3319149" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39432624" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -292,7 +368,6 @@
       <window_info anchor="bottom" id="TMC Test Results" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32765958" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3294036" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -304,6 +379,7 @@
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="right" id="Database" order="9" />
       <window_info anchor="right" id="TMC Project List" order="10" weight="0.3295302" />
+      <window_info anchor="right" id="Coverage" order="11" side_tool="true" weight="0.3294036" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27181208" />
@@ -346,28 +422,7 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Gui.java</url>
-          <line>608</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Docenten.txt" />
-    <entry file="file://$PROJECT_DIR$/src/Students.txt" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-803">
@@ -388,22 +443,6 @@
           <caret line="482" column="19" selection-start-line="482" selection-start-column="19" selection-end-line="482" selection-end-column="19" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Files/Students.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="16" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Files/Klassen.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Files/Vakken.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -430,16 +469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Files/Docenten.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -577,13 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SimulatieProjectV_0.1.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/com/sun/javafx/tk/quantum/GlassViewEventHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5702">
@@ -598,12 +620,145 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Files/RosterHours.txt">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/SimulatieProjectV_0.1/Gui.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="-7523" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#820#821#0" expanded="true" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RosterHours.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2764#2765#0" expanded="true" />
+            <element signature="e#2987#2988#0" expanded="true" />
+            <element signature="e#3029#3030#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maploader/Tiled/TiledLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maploader/Tiled/TiledTileSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maploader/Tiled/TiledTileMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maploader/Tiled/TiledTile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maploader/Tiled/TiledMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maploader/Tiled/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-186">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pathfinding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maploader/Destination.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/Docenten.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/Klassen.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maploader/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maploader/MapDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2074">
+          <caret line="136" column="24" selection-start-line="136" selection-start-column="24" selection-end-line="136" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Roster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="107" column="14" selection-start-line="107" selection-start-column="14" selection-end-line="107" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/RosterHours.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/Lokalen.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Files/StockHours.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -612,51 +767,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Roster.java">
+    <entry file="file://$PROJECT_DIR$/Files/Students.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        <state relative-caret-position="986">
+          <caret line="58" column="16" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RosterHours.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2664#2665#0" expanded="true" />
-            <element signature="e#2799#2800#0" expanded="true" />
-            <element signature="e#2831#2832#0" expanded="true" />
-            <element signature="e#2957#2958#0" expanded="true" />
-            <element signature="e#2987#2988#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Files/Vakken.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Class.java">
+    <entry file="file://$PROJECT_DIR$/SimulatieProjectV_0.1.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#820#821#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Gui.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="611" column="47" selection-start-line="611" selection-start-column="47" selection-end-line="611" selection-end-column="47" />
+        <state relative-caret-position="354">
+          <caret line="690" column="51" selection-start-line="690" selection-start-column="51" selection-end-line="690" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#17005#17006#0" expanded="true" />
-            <element signature="e#17053#17054#0" expanded="true" />
-            <element signature="e#21338#21339#0" expanded="true" />
-            <element signature="e#21371#21372#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>javax.json</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>SimulatieProjectV_0.1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>fxgraphics2d-1.9</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

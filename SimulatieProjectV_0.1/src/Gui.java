@@ -1,32 +1,19 @@
-import java.lang.*;
-
-
+import Maploader.MapDemo;
 import javafx.application.Application;
-import javafx.beans.value.ObservableListValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.geometry.*;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
-
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
-
-
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-
-import javafx.stage.FileChooser;
-
+import javafx.stage.Stage;
 
 import javax.swing.*;
-import java.io.*;
-import java.sql.Time;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -47,16 +34,19 @@ public class Gui extends Application {
     private ArrayList<String> lokalen;
     private ArrayList<String> klassen;
     private ComboBox comboBoxTeacher;
+    private TabPane tabPane;
     private  VBox vBox;
     private  HBox hBox;
     private  VBox vBoxTime;
     private  VBox vBox0;
+    private VBox vBoxBtn;
     private  Label labelKlas;
     private  Label labelVak;
     private  Label labelBeginTijd;
     private  Label labelEindtijd;
     private  Label labelDocent;
     private  Label labelLokaal;
+    private Label labelJson;
     private  VBox vBox1;
     private  TextField textFieldKlas;
     private ComboBox comboBoxKlas;
@@ -81,6 +71,7 @@ public class Gui extends Application {
     private HBox hBox1;
     private Button buttonAdd;
     private Button buttonOpslaan;
+    private Button btnMapPicker;
     private VBox vBox3;
     private HBox hBox2;
     private Separator separator0;
@@ -102,6 +93,12 @@ public class Gui extends Application {
     private Button buttonHelp;
     private BorderPane borderpane;
     private Label labelteacher;
+    private Tab roosterTab;
+    private Tab simulationTab;
+    private HBox hboxBtn;
+    private VBox vBoxMap;
+    private Button btnSimulate;
+
     @Override
     public void start(Stage stage) {
         vakken = new ArrayList<>();
@@ -117,6 +114,13 @@ public class Gui extends Application {
         obl = FXCollections.observableList(lokalen);
         obk = FXCollections.observableList(klassen);
         obv = FXCollections.observableList(vakken);
+
+        tabPane = new TabPane();
+        simulationTab = new Tab("Simulation");
+        roosterTab = new Tab("Roster");
+        tabPane.getTabs().add(roosterTab);
+        tabPane.getTabs().add(simulationTab);
+
 
         for (int i = 0; i < 24; i++){
             if (i > 9){
@@ -137,6 +141,8 @@ public class Gui extends Application {
 
         }
 
+        hboxBtn = new HBox();
+        labelJson = new Label();
         vakken.add("OGP");
         vakken.add("P&OC");
         vakken.add("2DGraphics");
@@ -155,6 +161,8 @@ public class Gui extends Application {
         klassen.add("B");
         klassen.add("C");
 
+
+        btnSimulate = new Button();
         comboBoxTeacher = new ComboBox(obt);
         labelteacher = new Label();
         borderpane = new BorderPane();
@@ -162,6 +170,7 @@ public class Gui extends Application {
         hBox = new HBox();
         vBoxTime = new VBox();
         vBox0 = new VBox();
+        vBoxMap = new VBox();
         labelKlas = new Label();
         labelVak = new Label();
         labelBeginTijd = new Label();
@@ -173,7 +182,9 @@ public class Gui extends Application {
         comboBoxKlas = new ComboBox();
         textFieldVak = new TextField();
         comboBoxVak = new ComboBox();
+        btnMapPicker = new Button();
         textFieldBegintijd = new TextField();
+        vBoxBtn = new VBox();
         comboBoxBTijd = new ComboBox();
         textFieldEindtijd = new TextField();
         comboBoxETijd = new ComboBox();
@@ -244,15 +255,20 @@ public class Gui extends Application {
         vBox.setAlignment(javafx.geometry.Pos.CENTER_LEFT);
         vBox.setId("VBox");
         vBox.setPrefHeight(674.0);
-        vBox.setPrefWidth(370.0);
+        vBox.setPrefWidth(390.0);
         vBox.setSpacing(5.0);
 
         hBox.setPrefHeight(503.0);
         hBox.setPrefWidth(309.0);
+        hBox.setSpacing(10.0);
 
         vBoxTime.setPrefHeight(238.0);
         vBoxTime.setPrefWidth(92.0);
         vBoxTime.setSpacing(17.0);
+
+        vBoxBtn.setPrefHeight(238.0);
+        vBoxBtn.setPrefWidth(92.0);
+        vBoxBtn.setSpacing(17.0);
 
         vBox0.setPrefHeight(238.0);
         vBox0.setPrefWidth(92.0);
@@ -338,6 +354,8 @@ public class Gui extends Application {
         hBox0.setPrefWidth(282.0);
         hBox0.setSpacing(30.0);
 
+
+
         buttonChange.setId("buttonChange");
         buttonChange.setMnemonicParsing(false);
         buttonChange.setPrefHeight(62.0);
@@ -368,6 +386,17 @@ public class Gui extends Application {
         borderpane.setLeft(vBox);
         borderpane.setPadding(new Insets(10.0, 0.0, 10.0, 10.0));
 
+        btnMapPicker.setId("btnMapPicker");
+        btnMapPicker.setMnemonicParsing(false);
+        btnMapPicker.setPrefHeight(62.0);
+        btnMapPicker.setPrefWidth(214.0);
+        btnMapPicker.setText("Choose JSON File");
+
+        btnSimulate.setId("btnSimulatie");
+        btnSimulate.setMnemonicParsing(false);
+        btnSimulate.setPrefWidth(214.0);
+        btnSimulate.setText("Run Simulation");
+
         vBox3.setPrefHeight(674.0);
         vBox3.setPrefWidth(760.0);
 
@@ -377,12 +406,17 @@ public class Gui extends Application {
 
         separator0.setOrientation(javafx.geometry.Orientation.VERTICAL);
         separator0.setPrefHeight(2.0);
-        separator0.setPrefWidth(20.0);
+        separator0.setPrefWidth(40.0);
 
         vBox4.setPrefHeight(324.0);
         vBox4.setPrefWidth(39.0);
         vBox4.setSpacing(40.0);
 
+        vBoxMap.setPrefHeight(324.0);
+        vBoxMap.setPrefWidth(39.0);
+        vBoxMap.setSpacing(40.0);
+
+        labelJson.setText("Json File : ");
         label8.setId("Label8");
         label8.setText("08:00");
 
@@ -455,8 +489,10 @@ public class Gui extends Application {
         vBox1.getChildren().add(comboBoxTeacher);
         vBox1.getChildren().add(comboBoxLokaal);
 
+        vBoxMap.getChildren().add(btnMapPicker);
+        vBoxMap.getChildren().add(labelJson);
+        vBoxMap.getChildren().add(btnSimulate);
 
-        //vBox1.getChildren().add(textFieldLokaal);
         hBox.getChildren().add(vBox1);
         hBox.getChildren().add(vBoxTime);
         vBox.getChildren().add(hBox);
@@ -466,6 +502,11 @@ public class Gui extends Application {
         vBox2.getChildren().add(hBox0);
         hBox1.getChildren().add(buttonAdd);
         hBox1.getChildren().add(buttonOpslaan);
+        hBox.getChildren().add(vBoxBtn);
+        vBoxBtn.getChildren().add(buttonChange);
+        vBoxBtn.getChildren().add(buttonAdd);
+        vBoxBtn.getChildren().add(buttonOphalen);
+        vBoxBtn.getChildren().add(buttonOpslaan);
         vBox2.getChildren().add(hBox1);
         vBox.getChildren().add(vBox2);
         hBox2.getChildren().add(separator0);
@@ -488,8 +529,12 @@ public class Gui extends Application {
         comboboxMinutesB.setItems(obbM);
         comboboxMinutesE.setItems(obbM);
         BorderPane pane = new BorderPane();
+        roosterTab.setContent(vBox);
+        simulationTab.setContent(vBoxMap);
 
-        pane.setLeft(vBox);
+
+
+        pane.setLeft(tabPane);
         pane.setRight(vBox3);
         Scene scene = new Scene(pane, 1050, 694.0);
         stage.setScene(scene);
@@ -501,6 +546,20 @@ public class Gui extends Application {
             public void handle(ActionEvent event) {
                 FilerName();
                 tableViewRoster.setItems(obr);
+            }
+        });
+
+        btnMapPicker.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                JsonPicker();
+            }
+        });
+
+        btnSimulate.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                RunSimulation();
             }
         });
 
@@ -626,6 +685,16 @@ public class Gui extends Application {
         System.out.println("Rooster Text I/O: " + r.toString());
     }
 
+    public void JsonPicker(){
+        MapDemo md = new MapDemo();
+        String fileName = md.MapOpener();
+        labelJson.setText("Json File : " + fileName );
+    }
+
+    public void RunSimulation(){
+        MapDemo md = new MapDemo();
+        md.init();
+    }
 
 
     public static void main(String[] args)
